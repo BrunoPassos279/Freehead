@@ -1,0 +1,25 @@
+/* --------------- IMPORTANDO FONT POPPINS --------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+    /* --------------- PALETA DE CORES --------------- */
+    --vermelho-principal:   #cd0000;
+    --vermelho-secundario:  #650405;
+    --escuro:               #191717;
+    --branco:               #fdf8f6;
+
+    /* --------------- TIPOGRAFIA --------------- */
+    --font-principal: 'Poppins', sans-serif;
+
+    --titulo-tamanho:    35px;
+    --titulo-peso:       600;
+    --titulo-altura:     45px;
+
+    --subtitulo-tamanho: 18px;
+    --subtitulo-peso:    400;
+
+
+    --texto-tamanho:     14px;
+    --texto-peso:        400;
+    --texto-altura:      20px;
+}

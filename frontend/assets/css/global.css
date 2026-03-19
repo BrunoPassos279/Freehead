@@ -1,0 +1,90 @@
+/* --------------- GLOBAL --------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.25s ease;
+}
+
+html, body {
+    min-height: 100vh;
+    width: 100%;
+    font-family:var(--font-principal);
+}
+
+/* --------------- ESTILO LOGOTIPO --------------- */
+#logo {
+    width: 150px;
+}
+
+/* --------------- ESTILO BOTÕES --------------- */
+.btn {
+    border-radius: 50px;
+    border: none;
+    font-family: var(--font-principal);
+    font-size: var(--subtitulo-tamanho);
+    cursor: pointer;
+}
+
+.btn-vermelho {
+    background-color: var(--vermelho-principal);
+    border: 2px solid var(--vermelho-principal);
+    color: var(--branco);
+}
+
+.btn-vermelho:hover {
+    background-color: var(--vermelho-secundario);
+    border: 2px solid var(--vermelho-secundario);
+}
+
+.btn-branco {
+    background-color: var(--branco);
+    color: var(--vermelho-principal);
+    border: 1px solid var(--vermelho-principal);
+}
+
+.btn-branco:hover{
+    background-color: var(--vermelho-secundario);
+    border: 1px solid var(--vermelho-secundario);
+    color: var(--branco);
+}
+
+/* --------------- ESTILO INPUT --------------- */
+
+/* ---Personaliza o input---*/
+.input-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: px;
+}
+
+/* ---Personaliza o título do input---*/
+.input-grupo label {
+    font-size: var(--texto-tamanho);
+    color: var(--vermelho-principal);
+}
+
+/* ---Personaliza o input no geral---*/
+.input-grupo input {
+    padding: 12px 20px;
+    width: 500px;
+    border: 1px solid var(--vermelho-principal);
+    border-radius: 50px;
+    background: transparent;
+    font-family: var(--font-principal);
+    font-size: var(--texto-tamanho);
+    color: var(--vermelho-principal);
+    outline: none;
+}
+
+/* ---Personaliza a cor do texto dentro do input---*/
+.input-grupo input::placeholder {
+    color: rgba(205, 0, 0, 0.5);
+}
+
+/* ---Personaliza o autopreenchimento do input---*/
+.input-grupo input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+    -webkit-text-fill-color: var(--vermelho-principal);
+    transition: background-color 5000s ease-in-out 0s;
+}

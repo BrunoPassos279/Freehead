@@ -1,0 +1,86 @@
+/* --------------- ESTILIZANDO TELA BASE --------------- */
+.pagelog {
+    height:100vh;
+    display: flex;
+    background-color: var(--vermelho-secundario);
+}
+
+/* --------------- LADO ESQUERDO --------------- */
+.ladoEsquerdo{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    color: var(--branco);
+    padding-left: 140px;
+    padding-top: 50px;
+    background-color: var(--vermelho-principal);
+    gap: 5px;
+}
+
+.ladoEsquerdo h1{
+    font-size: 64px;
+    width: 355px;
+    line-height: 55px;
+}
+
+.ladoEsquerdo p{
+    font-size: var(--subtitulo-tamanho);
+}
+
+.images{
+    display: flex;
+    justify-content:space-between;
+    align-items: end;
+    padding-right: 80px;
+    padding-bottom: 10px;
+}
+
+.mulherFeiz{
+    height: 500px;
+}
+
+
+/* --------------- LADO DIREITO --------------- */
+.ladoDireito{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ----- Formulário ----- */
+.form{
+    width: 650px;
+    height: 500px;
+    border-radius: 30px;
+    background-color: var(--branco);
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    gap: 30px;
+}
+
+.form h2 {
+    text-align: center;
+    font-size: var(--titulo-tamanho);
+    color: var(--vermelho-principal);
+}
+
+/* ----- 2 Inputs ----- */
+.inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ----- 2 Botões ----- */
+.botoes{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+/* --- Tamanho do botão --- */
+.btn-tamanho {
+    width: 500px;
+    height: 35px; 
+}
