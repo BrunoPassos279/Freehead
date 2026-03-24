@@ -22,7 +22,7 @@
 
             <div class="images">
                 <img class="mulherFeiz" src="../assets/img/images/mulherFeliz.svg" alt="Imagem de uma mulher pulando de alegria">
-                <img id="logo" src="../assets/img/logos/logoWhite.svg" alt="Logo da Freehead vermelha">
+                <img id="logo" src="../assets/img/logos/Freehead Logo W&O.svg" alt="Logo da Freehead Laranja e branca">
             </div>
         </div>
         <!---------------- FIM DO LADO ESQUERDO ---------------->

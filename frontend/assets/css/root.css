@@ -3,10 +3,11 @@
 
 :root {
     /* --------------- PALETA DE CORES --------------- */
-    --vermelho-principal:   #cd0000;
-    --vermelho-secundario:  #650405;
-    --escuro:               #191717;
-    --branco:               #fdf8f6;
+    --azul-principal:   #253A59;
+    --azul-secundario:  #2F4463;
+    --escuro:           #0A1A32;
+    --branco:           #fdf8f6;
+    --laranja:          #F4662D;
 
     /* --------------- TIPOGRAFIA --------------- */
     --font-principal: 'Poppins', sans-serif;

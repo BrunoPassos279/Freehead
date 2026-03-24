@@ -14,7 +14,7 @@ html, body {
 
 /* --------------- ESTILO LOGOTIPO --------------- */
 #logo {
-    width: 150px;
+    width: 247px;
 }
 
 /* --------------- ESTILO BOTÕES --------------- */
@@ -26,26 +26,26 @@ html, body {
     cursor: pointer;
 }
 
-.btn-vermelho {
-    background-color: var(--vermelho-principal);
-    border: 2px solid var(--vermelho-principal);
+.btn-azul {
+    background-color: var(--azul-principal);
+    border: 2px solid var(--azul-principal);
     color: var(--branco);
 }
 
-.btn-vermelho:hover {
-    background-color: var(--vermelho-secundario);
-    border: 2px solid var(--vermelho-secundario);
+.btn-azul:hover {
+    background-color: var(--azul-secundario);
+    border: 2px solid var(--azul-secundario);
 }
 
 .btn-branco {
     background-color: var(--branco);
     color: var(--vermelho-principal);
-    border: 1px solid var(--vermelho-principal);
+    border: 1px solid var(--azul-principal);
 }
 
 .btn-branco:hover{
-    background-color: var(--vermelho-secundario);
-    border: 1px solid var(--vermelho-secundario);
+    background-color: var(--azul-secundario);
+    border: 1px solid var(--azul-secundario);
     color: var(--branco);
 }
 
@@ -61,30 +61,30 @@ html, body {
 /* ---Personaliza o título do input---*/
 .input-grupo label {
     font-size: var(--texto-tamanho);
-    color: var(--vermelho-principal);
+    color: var(--azul-principal);
 }
 
 /* ---Personaliza o input no geral---*/
 .input-grupo input {
     padding: 12px 20px;
     width: 500px;
-    border: 1px solid var(--vermelho-principal);
+    border: 1px solid var(--azul-principal);
     border-radius: 50px;
     background: transparent;
     font-family: var(--font-principal);
     font-size: var(--texto-tamanho);
-    color: var(--vermelho-principal);
+    color: var(----azul-principal);
     outline: none;
 }
 
 /* ---Personaliza a cor do texto dentro do input---*/
 .input-grupo input::placeholder {
-    color: rgba(205, 0, 0, 0.5);
+    color: rgba(47, 68, 99, 0.5);
 }
 
 /* ---Personaliza o autopreenchimento do input---*/
 .input-grupo input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px transparent inset;
-    -webkit-text-fill-color: var(--vermelho-principal);
+    -webkit-text-fill-color: var(--azul-principal);
     transition: background-color 5000s ease-in-out 0s;
 }
