@@ -45,7 +45,7 @@
 
                 <div class="botoes">
                     <!-- Botões de login e criar contas -->
-                    <?php $btnLabel = "Entrar"; $btnClass = "btn-vermelho btn-tamanho"; ?>
+                    <?php $btnLabel = "Entrar"; $btnClass = "btn-azul btn-tamanho"; ?>
                     <?php include '../includes/btn.inc.php'; ?>
 
                     <?php $btnLabel = "Criar conta"; $btnClass = "btn-branco btn-tamanho"; ?>
