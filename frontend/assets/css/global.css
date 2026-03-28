@@ -14,7 +14,7 @@ html, body {
 
 /* --------------- ESTILO LOGOTIPO --------------- */
 #logo {
-    width: 150px;
+    width: 247px;
 }
 
 /* --------------- ESTILO BOTÕES --------------- */
@@ -26,6 +26,7 @@ html, body {
     cursor: pointer;
 }
 
+<<<<<<< HEAD
 .btn-laranja {
     background-color: var(--laranja);
     border: 2px solid var(--laranja);
@@ -35,11 +36,26 @@ html, body {
 .btn-laranja:hover {
     background-color: var(--azul-principal);
     border: 2px solid var(--azul-principal);
+=======
+.btn-azul {
+    background-color: var(--azul-principal);
+    border: 2px solid var(--azul-principal);
+    color: var(--branco);
+}
+
+.btn-azul:hover {
+    background-color: var(--azul-secundario);
+    border: 2px solid var(--azul-secundario);
+>>>>>>> b39769c6feffc83d3e97a34912764eed23df6a01
 }
 
 .btn-branco {
     background-color: var(--branco);
+<<<<<<< HEAD
     color: var(--azul-principal);
+=======
+    color: var(--vermelho-principal);
+>>>>>>> b39769c6feffc83d3e97a34912764eed23df6a01
     border: 1px solid var(--azul-principal);
 }
 
@@ -67,6 +83,7 @@ html, body {
 .input-grupo input {
     padding: 12px 20px;
     width: 500px;
+<<<<<<< HEAD
     border: none;
     border-bottom: 1px solid var(--azul-principal);
     
@@ -74,12 +91,24 @@ html, body {
     font-family: var(--font-principal);
     font-size: var(--texto-tamanho);
     color: var(--azul-principal);
+=======
+    border: 1px solid var(--azul-principal);
+    border-radius: 50px;
+    background: transparent;
+    font-family: var(--font-principal);
+    font-size: var(--texto-tamanho);
+    color: var(----azul-principal);
+>>>>>>> b39769c6feffc83d3e97a34912764eed23df6a01
     outline: none;
 }
 
 /* ---Personaliza a cor do texto dentro do input---*/
 .input-grupo input::placeholder {
+<<<<<<< HEAD
     color: var(--azul-secundario);
+=======
+    color: rgba(47, 68, 99, 0.5);
+>>>>>>> b39769c6feffc83d3e97a34912764eed23df6a01
 }
 
 /* ---Personaliza o autopreenchimento do input---*/
