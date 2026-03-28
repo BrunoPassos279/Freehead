@@ -22,11 +22,7 @@
 
             <div class="images">
                 <img class="mulherFeiz" src="../assets/img/images/mulherFeliz.svg" alt="Imagem de uma mulher pulando de alegria">
-<<<<<<< HEAD
                 <img id="logo" src="../assets/img/logos/logoBrancaLaranja.svg" alt="Logo da Freehead branca e laranja">
-=======
-                <img id="logo" src="../assets/img/logos/Freehead Logo W&O.svg" alt="Logo da Freehead Laranja e branca">
->>>>>>> b39769c6feffc83d3e97a34912764eed23df6a01
             </div>
         </div>
         <!---------------- FIM DO LADO ESQUERDO ---------------->
@@ -49,11 +45,7 @@
 
                 <div class="botoes">
                     <!-- Botões de login e criar contas -->
-<<<<<<< HEAD
                     <?php $btnLabel = "Entrar"; $btnClass = "btn-laranja btn-tamanho"; ?>
-=======
-                    <?php $btnLabel = "Entrar"; $btnClass = "btn-azul btn-tamanho"; ?>
->>>>>>> b39769c6feffc83d3e97a34912764eed23df6a01
                     <?php include '../includes/btn.inc.php'; ?>
 
                     <?php $btnLabel = "Criar conta"; $btnClass = "btn-branco btn-tamanho"; ?>
