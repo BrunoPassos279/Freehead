@@ -2,7 +2,7 @@
 .pagelog {
     height:100vh;
     display: flex;
-    background-color: var(--vermelho-secundario);
+    background-color: var(--azul-secundario);
 }
 
 /* --------------- LADO ESQUERDO --------------- */
@@ -13,7 +13,7 @@
     color: var(--branco);
     padding-left: 140px;
     padding-top: 50px;
-    background-color: var(--vermelho-principal);
+    background-color: var(--azul-principal);
     gap: 5px;
 }
 
@@ -63,7 +63,7 @@
 .form h2 {
     text-align: center;
     font-size: var(--titulo-tamanho);
-    color: var(--vermelho-principal);
+    color: var(--azul-principal);
 }
 
 /* ----- 2 Inputs ----- */

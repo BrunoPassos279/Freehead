@@ -22,7 +22,7 @@
 
             <div class="images">
                 <img class="mulherFeiz" src="../assets/img/images/mulherFeliz.svg" alt="Imagem de uma mulher pulando de alegria">
-                <img id="logo" src="../assets/img/logos/logoWhite.svg" alt="Logo da Freehead vermelha">
+                <img id="logo" src="../assets/img/logos/logoBrancaLaranja.svg" alt="Logo da Freehead branca e laranja">
             </div>
         </div>
         <!---------------- FIM DO LADO ESQUERDO ---------------->
@@ -45,7 +45,7 @@
 
                 <div class="botoes">
                     <!-- Botões de login e criar contas -->
-                    <?php $btnLabel = "Entrar"; $btnClass = "btn-vermelho btn-tamanho"; ?>
+                    <?php $btnLabel = "Entrar"; $btnClass = "btn-laranja btn-tamanho"; ?>
                     <?php include '../includes/btn.inc.php'; ?>
 
                     <?php $btnLabel = "Criar conta"; $btnClass = "btn-branco btn-tamanho"; ?>
