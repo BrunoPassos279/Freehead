@@ -1,5 +1,5 @@
 
-<div class="input-grupo">
+<div class="input-grupo <?= isset($inputClass) ? $inputClass : '' ?>">
 
     <!-- Título do input -->
     <label for="<?= $inputId ?>"><?= $inputLabel ?></label>

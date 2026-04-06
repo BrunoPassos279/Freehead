@@ -48,8 +48,8 @@
                     <?php $btnLabel = "Entrar"; $btnClass = "btn-laranja btn-tamanho"; ?>
                     <?php include '../includes/btn.inc.php'; ?>
 
-                    <?php $btnLabel = "Criar conta"; $btnClass = "btn-branco btn-tamanho"; ?>
-                    <?php include '../includes/btn.inc.php'; ?> 
+                    <?php $btnLabel = "Criar conta"; $btnClass = "btn-branco btn-tamanho"; $btnLink = "../pages/cadastroEscola.php"; ?>
+                    <?php include '../includes/btn.inc.php'; ?>
                 </div>
             </form>
         </div>

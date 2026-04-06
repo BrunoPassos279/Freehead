@@ -18,6 +18,13 @@ html, body {
 }
 
 /* --------------- ESTILO BOTÕES --------------- */
+a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .btn {
     border-radius: 50px;
     border: none;
@@ -65,11 +72,11 @@ html, body {
 
 /* ---Personaliza o input no geral---*/
 .input-grupo input {
-    padding: 12px 20px;
-    width: 500px;
+    padding: 5px 0px;
+    margin-left: 20px;
+    width: 400px;
     border: none;
     border-bottom: 1px solid var(--azul-principal);
-    
     background: transparent;
     font-family: var(--font-principal);
     font-size: var(--texto-tamanho);
