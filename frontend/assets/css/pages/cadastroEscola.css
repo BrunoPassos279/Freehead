@@ -81,7 +81,7 @@
 /* --- Conjunto de todos os checks idiomas --- */
 .checkIdioma{
     display: flex;
-    gap: 15px;
+    gap: clamp(6px, 1.2vh, 15px);
 }
 
 /* Esconde o desenho de checkbox padrão */
