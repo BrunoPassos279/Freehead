@@ -3,24 +3,27 @@
     height:100vh;
     display: flex;
     background-color: var(--azul-secundario);
+    overflow: hidden;
 }
 
 /* --------------- LADO ESQUERDO --------------- */
 .ladoEsquerdo{
-    width: 60%;
+    width: 50%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     color: var(--branco);
-    padding-left: 140px;
-    padding-top: 50px;
+    padding-left: clamp(80px, 10vw, 140px);
+    padding-top: clamp(20px, 4vh, 50px);
     background-color: var(--azul-principal);
     gap: 5px;
+    overflow: hidden;
 }
 
 .ladoEsquerdo h1{
-    font-size: 64px;
-    width: 355px;
-    line-height: 55px;
+    font-size: clamp(32px, 3.5vw, 64px);
+    width: 65%;
+    line-height: 1.1; /* Usando I.A nesta linha pois precisava de ajuda com responsividade*/
 }
 
 .ladoEsquerdo p{
@@ -30,19 +33,20 @@
 .images{
     display: flex;
     justify-content:space-between;
-    align-items: end;
-    padding-right: 80px;
-    padding-bottom: 10px;
+    align-items: flex-end;
+    padding-right: clamp(20px, 5vw, 80px);
+    padding-bottom: 30px;
+    flex: 1; /* Usando I.A nesta linha pois precisava de ajuda com responsividade*/
 }
 
 .mulherFeiz{
-    height: 500px;
+    max-height: clamp(250px, 55vh, 520px);
+    object-fit: contain;
 }
-
 
 /* --------------- LADO DIREITO --------------- */
 .ladoDireito{
-    width: 40%;
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -50,8 +54,10 @@
 
 /* ----- Formulário ----- */
 .form{
-    width: 650px;
-    height: 500px;
+    width: 85%;
+    max-width: 550px;
+    height: auto;
+    min-height: 400px;
     border-radius: 30px;
     background-color: var(--branco);
     display: flex;
@@ -60,13 +66,15 @@
     gap: 30px;
 }
 
+/* ----- Título do Formulário ----- */
 .form h2 {
     text-align: center;
     font-size: var(--titulo-tamanho);
     color: var(--azul-principal);
 }
 
-/* ----- 2 Inputs ----- */
+/* ----- 2 Inputs Entrar e Criar Conta----- */
+
 .inputs{
     display: flex;
     flex-direction: column;
@@ -81,6 +89,7 @@
 }
 /* --- Tamanho do botão --- */
 .btn-tamanho {
-    width: 500px;
-    height: 35px; 
+    width: 100%;
+    max-width: 500px;
+    height: 40px;
 }

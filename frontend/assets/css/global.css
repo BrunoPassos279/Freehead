@@ -13,8 +13,8 @@ html, body {
 }
 
 /* --------------- ESTILO LOGOTIPO --------------- */
-#logo {
-    width: 150px;
+.logo {
+    width: clamp(120px, 15vw, 200px);
 }
 
 /* --------------- ESTILO BOTÕES --------------- */
@@ -33,6 +33,7 @@ a {
     cursor: pointer;
 }
 
+/* ----- Botão Laranja -----*/
 .btn-laranja {
     background-color: var(--laranja);
     border: 2px solid var(--laranja);
@@ -44,6 +45,7 @@ a {
     border: 2px solid var(--azul-principal);
 }
 
+/* ----- Botão Branco -----*/
 .btn-branco {
     background-color: var(--branco);
     color: var(--azul-principal);
@@ -54,6 +56,19 @@ a {
     background-color: var(--azul-secundario);
     border: 1px solid var(--azul-secundario);
     color: var(--branco);
+}
+
+/* ----- Botão Azul -----*/
+.btn-azul {
+    background-color: var(--azul-principal);
+    color: var(--branco);
+    border: 1px solid var(--azul-principal);
+}
+
+.btn-azul:hover{
+    background-color: var(--branco);
+    border: 1px solid var(--azul-secundario);
+    color: var(--azul-principal);
 }
 
 /* --------------- ESTILO INPUT --------------- */
@@ -74,7 +89,7 @@ a {
 .input-grupo input {
     padding: 5px 0px;
     margin-left: 20px;
-    width: 400px;
+    width: 100%;
     border: none;
     border-bottom: 1px solid var(--azul-principal);
     background: transparent;

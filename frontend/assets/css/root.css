@@ -2,25 +2,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 :root {
+
     /* --------------- PALETA DE CORES --------------- */
     --azul-principal:       #253A59;
     --azul-secundario:      #2F4463;
     --escuro:               #0A1A32;
     --branco:               #FDF8F6;
     --laranja:              #F4662D;
+    --cinza-transparente:   rgba(253, 248, 246, 0.5);
 
     /* --------------- TIPOGRAFIA --------------- */
     --font-principal: 'Poppins', sans-serif;
 
-    --titulo-tamanho:    35px;
+     /* ----- Título -----*/
+    --titulo-tamanho:    clamp(22px, 3vw, 35px);
     --titulo-peso:       600;
-    --titulo-altura:     45px;
 
-    --subtitulo-tamanho: 18px;
+    /* ----- Sub-título -----*/
+    --subtitulo-tamanho: clamp(14px, 1.8vw, 18px);
     --subtitulo-peso:    400;
 
-
-    --texto-tamanho:     14px;
+    /* ----- Texto -----*/
+    --texto-tamanho:     clamp(12px, 1.2vw, 14px);
     --texto-peso:        400;
-    --texto-altura:      20px;
 }

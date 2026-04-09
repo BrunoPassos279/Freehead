@@ -9,39 +9,40 @@
 .esquerda{
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 25px;
     width: 50%;
     padding: 50px;
-    border: 1px solid red;
 }
 
 /* --- Título "Criar conta"--- */
 .esquerda >h2{
-    font-size: 35px;
+    font-size: var(--titulo-tamanho);
     text-align: center;
     color: var(--laranja);
 }
 
 /* -------- FORMULÁRIO -------- */
-
 .form{
+    width: 100%;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     margin-left: 30px;
-    gap: 20px;
+    gap: clamp(8px, 1.5vh, 20px);
     color: var(--branco);
 }
 
 /* --- Agrupamento dos 5 inputs do form --- */
 .inputs{
+    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: clamp(6px, 1.2vh, 15px);
 }
 
-/* ----- Título "Informaões" ----- */
+/* ----- Título "Informações" ----- */
 .inputs>h3{
-    font-size: 25px;
+    font-size: var(--subtitulo-tamanho);
     margin-left: 20px;
     color: var(--laranja);
 }
@@ -49,25 +50,25 @@
 /* ----- Texto de cima do input ----- */
 .input-cadastro label { 
     color: var(--branco);
-    font-size: 20px;
+    font-size: var(--subtitulo-tamanho);
     margin-left: 20px;
 }
 
 /* ----- texto dentro do input antes de preenchido ----- */
 .input-cadastro input::placeholder {
-    color: rgba(253, 248, 246, 0.5);
+    color: var(--cinza-transparente);
 }
 
 /* ----- texto dentro do input ----- */
 .input-cadastro input {
-    border-color: rgba(253, 248, 246, 0.5);
+    border-color: var(--cinza-transparente);
     color: var(--laranja);
 }
 
-/* -------- IDIOMAS -------- */
-
+/* --- Conjunto de checkbox com título --- */
 .idiomas{
     display: flex;
+    flex-direction: column;
     margin-left: 20px;
     gap: 15px;
 }
@@ -77,40 +78,115 @@
     color: var(--laranja);
 }
 
-/* Esconde o checkbox padrão */
+/* --- Conjunto de todos os checks idiomas --- */
+.checkIdioma{
+    display: flex;
+    gap: 15px;
+}
+
+/* Esconde o desenho de checkbox padrão */
 .idioma-item input[type="checkbox"] {
     display: none;
 }
 
 /* --- Imagem do idioma padrão (desativado) é escurecido --- */
 .idioma-item img {
-    filter: brightness(0.4);
+    filter: brightness(0.4); /* Claridade da imagem baixa */
     cursor: pointer;
     transition: filter 0.3s ease, scale 0.3s ease;
 }
 
 /* --- Se o usuário passa o mouse em cima o idioma fica claro --- */
 .idioma-item img:hover{
-    filter: brightness(1);
+    filter: brightness(0.9); /* Claridade da imagem aumenta */
 }
 
 /* Bandeira normal quando ativada */
 .idioma-item input[type="checkbox"]:checked + img {
-    filter: brightness(1);
-    scale: 1.1;
+    filter: brightness(1.1); /* Claridade da imagem aumenta mais */
+    scale: 1.1; /* Imagem aumenta de tamanho */
 }
 
-/* -------- BOTÃO -------- */
-
-/* --- Tamanho do botão "Criar conta" --- */
+/* --- Tamanho dos botões --- */
 .btn-tamanho {
-    width: 440px;
-    height: 35px; 
+    width: 100%;
+    max-width: 400px;
+    height: 40px; 
+}
+
+.logo{
+    margin-left: 40px
 }
 
 /* --------------- LADO DIREITO --------------- */
 .direita{
+    display: flex;
+    flex-direction: column;
     width: 50%;
     background-color: var(--branco);
-    border: 1px solid blue;
+    justify-content: space-between;
+}
+
+/* --- Conjunto de todo o conteúdo menos as ondas --- */
+.conteudoDireita{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    align-items: center;
+}
+
+/* --- Os dois textos convidativos --- */
+.boasVindas{
+    width: 45%
+}
+
+/* --- Título "Seja bem-vindo" --- */
+h1{
+    font-size: var(--titulo-tamanho);
+    color: var(--azul-principal);
+}
+
+/* --- Estilizando parágrafo --- */
+.boasVindas>p{
+    font-size: var(--subtitulo-tamanho);
+    color: var(--azul-principal);
+}
+
+/* --- Estilizando imagem --- */
+#imagemCadastro{
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+/* -------- ONDA (CRIADO COM I.A) -------- */
+.ocean {
+  position: relative;
+  width: 100%;
+  height: 30%;
+  overflow: hidden;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+}
+
+.wave-1 {
+  animation: onda 4s linear infinite;
+  fill: var(--azul-principal);
+}
+
+.wave-2 {
+  animation: onda 6s linear infinite reverse;
+  opacity: 0.5;
+  fill: var(--azul-secundario);
+}
+
+@keyframes onda {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
