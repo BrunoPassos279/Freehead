@@ -110,3 +110,26 @@ a {
     -webkit-text-fill-color: var(--azul-principal);
     transition: background-color 5000s ease-in-out 0s;
 }
+
+/* --------------- ESTILO SIDEBAR --------------- */
+.sidebar{
+    background-color: #0A1A32;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 70px;
+    height: 100vh;
+    gap: 35px;
+    padding-top: 25px;
+}
+
+.logo{
+    width: 48px;
+    height: 50px;
+    margin-bottom: 25px;
+}
+
+.atalho img{
+    height: 25px;
+    width: 25px;
+}
