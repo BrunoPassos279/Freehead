@@ -110,3 +110,150 @@ a {
     -webkit-text-fill-color: var(--azul-principal);
     transition: background-color 5000s ease-in-out 0s;
 }
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    width: 70px;
+    min-height: 100vh;
+    background-color: var(--escuro);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    transition: width 0.3s ease;
+    overflow: hidden;
+    flex-shrink: 0;
+
+
+}
+
+.sidebar:hover {
+    width: 250px;
+    align-items: flex-start;
+    padding: 20px 15px;
+}
+
+/* Esconde labels quando fechada */
+.sidebar-label {
+    display: none;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.sidebar:hover .sidebar-label {
+    display: block;
+    opacity: 1;
+}
+
+/* Avatar */
+.sidebar-user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+    width: 100%;
+    justify-content: center;
+
+}
+
+.sidebar-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #1e3a5f;
+    flex-shrink: 0;
+}
+
+.sidebar-user .sidebar-label {
+    color: var(--branco);
+    font-size: var(--texto-tamanho);
+}
+
+/* Busca */
+.sidebar-search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #1e3a5f;
+    border-radius: 8px;
+    padding: 8px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.sidebar-search input {
+    border: none;
+    background: transparent;
+    color: var(--branco);
+    font-size: var(--texto-tamanho);
+    outline: none;
+    width: 0;
+    transition: width 0.3s ease;
+}
+
+.sidebar:hover .sidebar-search input {
+    width: 160px;
+    display: block;
+}
+
+/* Nav */
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+    flex: 1;
+}
+
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 8px;
+    border-radius: 8px;
+    color: var(--branco);
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+    width: 100%;
+    justify-content: start;
+    margin-left: 10px;
+    
+}
+
+.sidebar-item:hover {
+    background-color: #1e3a5f;
+}
+
+.sidebar-item img {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.sidebar-item .sidebar-label {
+    font-size: var(--texto-tamanho);
+}
+
+/* Footer */
+.sidebar-footer {
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar-logo-small {
+    width: 40px;
+    flex-shrink: 0;
+}
+
+.sidebar:hover .sidebar-logo-small {
+    display: none;
+}
+
+.sidebar-logo-full {
+    width: 120px;
+    max-width: 120px;
+}
