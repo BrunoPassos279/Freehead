@@ -2,9 +2,7 @@
  
 <div align="center">
   <img src="https://github.com/user-attachments/assets/41727f8d-5bfb-4384-8904-ee698f44c573" width="247" alt="Logo branca detail">
-  
   # Sistema de Gestão Escolar
-  
 </div>
 
 <img width="3000" height="100" alt="212284100-561aa473-3905-4a80-b561-0d28506553ee" src="https://github.com/user-attachments/assets/ffa16b7c-9c8a-4fdc-b997-32bec19aec37" />
@@ -14,9 +12,10 @@
 
 
 
-
+<div align="center">
 ## Sobre o Projeto
 <img width="3000" height="100" alt="212284100-561aa473-3905-4a80-b561-0d28506553ee" src="https://github.com/user-attachments/assets/ffa16b7c-9c8a-4fdc-b997-32bec19aec37" />
+</div>
 
 
 O **Freehead** é um sistema web de gestão escolar desenvolvido em PHP, com o objetivo de auxiliar gestores no controle e organização das atividades administrativas de uma instituição de ensino.
@@ -25,8 +24,11 @@ A plataforma foi projetada para centralizar informações essenciais, permitindo
 
 ---
 
+<div align="center">
+
 ## Objetivo
 <img width="3000" height="100" alt="212284100-561aa473-3905-4a80-b561-0d28506553ee" src="https://github.com/user-attachments/assets/ffa16b7c-9c8a-4fdc-b997-32bec19aec37" />
+</div>
 
 
 O principal objetivo do Freehead é oferecer uma solução prática para:
@@ -42,24 +44,24 @@ O principal objetivo do Freehead é oferecer uma solução prática para:
 <img width="3000" height="100" alt="212284100-561aa473-3905-4a80-b561-0d28506553ee" src="https://github.com/user-attachments/assets/ffa16b7c-9c8a-4fdc-b997-32bec19aec37" />
 
 
-### 👤 Gestão de Usuários
+###  Gestão de Usuários
 
 * Cadastro e autenticação de gestores
 * Controle de acesso ao sistema
 
-### 🎓 Gestão de Alunos
+###  Gestão de Alunos
 
 * Cadastro de alunos
 * Edição de informações
 * Controle de status (ativo/inativo)
 
-### 🏫 Gestão de Turmas
+###  Gestão de Turmas
 
 * Criação de turmas
 * Associação de alunos às turmas
 * Visualização de participantes
 
-### 💰 Controle Financeiro
+### Controle Financeiro
 
 * Registro de mensalidades
 * Controle de pagamentos
@@ -67,7 +69,7 @@ O principal objetivo do Freehead é oferecer uma solução prática para:
 
 ---
 
-## 🧱 Estrutura do Sistema
+## Estrutura do Sistema
 
 O projeto segue uma organização modular para facilitar manutenção e escalabilidade:
 
@@ -81,7 +83,7 @@ O projeto segue uma organização modular para facilitar manutenção e escalabi
 
 ---
 
-## 🗄️ Banco de Dados
+## Banco de Dados
 
 O sistema é estruturado com base nas seguintes entidades principais:
 
@@ -93,7 +95,7 @@ O sistema é estruturado com base nas seguintes entidades principais:
 
 ---
 
-## 🔐 Segurança
+## Segurança
 
 Boas práticas básicas de segurança são aplicadas:
 
@@ -103,7 +105,7 @@ Boas práticas básicas de segurança são aplicadas:
 
 ---
 
-## 🚀 Escopo Inicial (MVP)
+## Escopo Inicial (MVP)
 
 A primeira versão do sistema contempla:
 
@@ -143,7 +145,7 @@ Funcionalidades adicionais, como relatórios e dashboards, poderão ser implemen
 
 ---
 
-## 📌 Considerações Finais
+## Considerações Finais
 
 O Freehead é um projeto em evolução, com foco em organização, clareza estrutural e possibilidade de crescimento. A proposta é construir uma base sólida que permita futuras melhorias sem comprometer a manutenção do sistema.
 
