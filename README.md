@@ -117,17 +117,22 @@ Funcionalidades adicionais, como relatórios e dashboards, poderão ser implemen
 ---
 
 ## Linguagens/Tecnologias Utilizadas
-<table border="0">
-  <tr>
-    <td width="150" align="center" valign="middle">
-     <img width="800" height="800" alt="219923809-b86dc415-a0c2-4a38-bc88-ad6cf06395a8" src="https://github.com/user-attachments/assets/03721d2d-9d7d-4ad2-b07d-af362ca23b80" />
-    </td>
-    <td valign="middle">
-      <strong>Linguagens & Tecnologias:</strong><br>
-      <code>PHP</code> <code>MySQL</code> <code>HTML5</code> <code>CSS3</code> <code>JavaScript</code>
-    </td>
-  </tr>
-</table>
+<div align="center">
+  <table border="0">
+    <tr>
+      <td valign="middle">
+       <img width="800" height="800" alt="219923809-b86dc415-a0c2-4a38-bc88-ad6cf06395a8" src="https://github.com/user-attachments/assets/efb1796f-67b0-47cb-b823-5878610d08f8" />
+      </td>
+      <td valign="middle">
+        <code>PHP</code> &nbsp; 
+        <code>MySQL</code> &nbsp; 
+        <code>HTML5</code> &nbsp; 
+        <code>CSS3</code> &nbsp; 
+        <code>JavaScript</code>
+      </td>
+    </tr>
+  </table>
+</div>
 
 ---
 
