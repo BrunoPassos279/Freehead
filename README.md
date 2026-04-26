@@ -117,18 +117,23 @@ Funcionalidades adicionais, como relatórios e dashboards, poderão ser implemen
 ---
 
 ## Linguagens/Tecnologias Utilizadas
+
 <div align="center">
-  <table border="0">
-    <tr>
-      <td valign="middle">
-       <img width="150" height="150" alt="219923809-b86dc415-a0c2-4a38-bc88-ad6cf06395a8" src="https://github.com/user-attachments/assets/efb1796f-67b0-47cb-b823-5878610d08f8" />
+  <table border="0" width="100%">
+    <tr align="center">
+      <td width="20%" align="center" valign="middle">
+        <img width="150" height="150" alt="Logo animada" src="https://github.com/user-attachments/assets/efb1796f-67b0-47cb-b823-5878610d08f8" />
       </td>
-      <td valign="middle">
-        <code>PHP</code> &nbsp; 
-        <code>MySQL</code> &nbsp; 
-        <code>HTML5</code> &nbsp; 
-        <code>CSS3</code> &nbsp; 
-        <code>JavaScript</code>
+      <td width="80%" valign="middle">
+        <table border="0" width="100%">
+          <tr align="center">
+            <td><code>PHP</code></td>
+            <td><code>MySQL</code></td>
+            <td><code>HTML5</code></td>
+            <td><code>CSS3</code></td>
+            <td><code>JavaScript</code></td>
+          </tr>
+        </table>
       </td>
     </tr>
   </table>
