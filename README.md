@@ -2,7 +2,8 @@
  
 <div align="center">
   <img src="https://github.com/user-attachments/assets/41727f8d-5bfb-4384-8904-ee698f44c573" width="247" alt="Logo branca detail">
-  # Sistema de Gestão Escolar
+ 
+## Sistema de Gestão Escolar
 </div>
 
 <img width="3000" height="100" alt="212284100-561aa473-3905-4a80-b561-0d28506553ee" src="https://github.com/user-attachments/assets/ffa16b7c-9c8a-4fdc-b997-32bec19aec37" />
