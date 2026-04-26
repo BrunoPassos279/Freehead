@@ -7,7 +7,9 @@
 
 
 
-## 📌 Sobre o Projeto
+## Sobre o Projeto
+<img width="3000" height="100" alt="212284100-561aa473-3905-4a80-b561-0d28506553ee" src="https://github.com/user-attachments/assets/ffa16b7c-9c8a-4fdc-b997-32bec19aec37" />
+
 
 O **Freehead** é um sistema web de gestão escolar desenvolvido em PHP, com o objetivo de auxiliar gestores no controle e organização das atividades administrativas de uma instituição de ensino.
 
@@ -15,7 +17,9 @@ A plataforma foi projetada para centralizar informações essenciais, permitindo
 
 ---
 
-## 🎯 Objetivo
+## Objetivo
+<img width="3000" height="100" alt="212284100-561aa473-3905-4a80-b561-0d28506553ee" src="https://github.com/user-attachments/assets/ffa16b7c-9c8a-4fdc-b997-32bec19aec37" />
+
 
 O principal objetivo do Freehead é oferecer uma solução prática para:
 
@@ -26,7 +30,9 @@ O principal objetivo do Freehead é oferecer uma solução prática para:
 
 ---
 
-## ⚙️ Funcionalidades
+##  Funcionalidades
+<img width="3000" height="100" alt="212284100-561aa473-3905-4a80-b561-0d28506553ee" src="https://github.com/user-attachments/assets/ffa16b7c-9c8a-4fdc-b997-32bec19aec37" />
+
 
 ### 👤 Gestão de Usuários
 
