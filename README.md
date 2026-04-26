@@ -116,13 +116,25 @@ Funcionalidades adicionais, como relatórios e dashboards, poderão ser implemen
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## Linguagens/Tecnologias Utilizadas
 
-* PHP
-* MySQL
-* HTML5
-* CSS3
-* JavaScript
+<table border="0">
+  <tr>
+    <td>
+      <h1>Título do Projeto</h1>
+      <p>
+         * PHP
+         * MySQL
+         * HTML5
+         * CSS3
+         * JavaScript
+      </p>
+    </td>
+    <td>
+    <img width="800" height="800" alt="219923809-b86dc415-a0c2-4a38-bc88-ad6cf06395a8" src="https://github.com/user-attachments/assets/da1f4e50-212c-43b3-8f49-d54a54c6cae7" />
+</td>
+  </tr>
+</table>
 
 ---
 
