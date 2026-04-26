@@ -121,7 +121,7 @@ Funcionalidades adicionais, como relatórios e dashboards, poderão ser implemen
   <table border="0">
     <tr>
       <td valign="middle">
-       <img width="800" height="800" alt="219923809-b86dc415-a0c2-4a38-bc88-ad6cf06395a8" src="https://github.com/user-attachments/assets/efb1796f-67b0-47cb-b823-5878610d08f8" />
+       <img width="30" height="30" alt="219923809-b86dc415-a0c2-4a38-bc88-ad6cf06395a8" src="https://github.com/user-attachments/assets/efb1796f-67b0-47cb-b823-5878610d08f8" />
       </td>
       <td valign="middle">
         <code>PHP</code> &nbsp; 
