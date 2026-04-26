@@ -115,8 +115,10 @@ A primeira versão do sistema contempla:
 Funcionalidades adicionais, como relatórios e dashboards, poderão ser implementadas em versões futuras.
 
 ---
+<div align="center">
 
 ## Linguagens/Tecnologias Utilizadas
+</div>
 
 <div align="center">
   <table border="0" width="100%">
