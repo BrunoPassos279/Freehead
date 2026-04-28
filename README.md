@@ -1,4 +1,4 @@
-<img width="854" height="100" alt="68747470733a2f2f63617073756c652d72656e6465722e76657263656c2e6170702f6170693f747970653d776176696e6726636f6c6f723d6772616469656e74266865696768743d3130302673656374696f6e3d666f6f746572" src="https://github.com/user-attachments/assets/109da7e1-137e-43ce-8094-669877cf0692" />
+
  
 <div align="center">
   <img src="https://github.com/user-attachments/assets/41727f8d-5bfb-4384-8904-ee698f44c573" width="247" alt="Logo branca detail">
