@@ -11,6 +11,7 @@
 <body>
 
     <div class="pagina">
+<<<<<<< HEAD
         <?php require_once '../includes/sidebar.inc.php'; ?>
 
         <main class="conteudo">
