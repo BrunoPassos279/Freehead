@@ -56,7 +56,7 @@
 
                         <label class="idioma-item"> <!-- FRANCÊS -->
                             <input type="checkbox" name="idiomas[]" value="2"> <!-- id do francês no banco -->
-                            <img src="../assets/img/images/bandeiraFrança.svg" alt="Francês">
+                            <img src="../assets/img/images/bandeiraFranca.svg" alt="Francês">
                         </label>
 
                         <label class="idioma-item"> <!-- ALEMÃO -->
@@ -66,12 +66,12 @@
 
                         <label class="idioma-item"> <!-- JAPONES -->
                             <input type="checkbox" name="idiomas[]" value="2"> <!-- id do japones no banco -->
-                            <img src="../assets/img/images/bandeiraJapão.svg" alt="Japones">
+                            <img src="../assets/img/images/bandeiraJapao.svg" alt="Japones">
                         </label>
 
                         <label class="idioma-item"> <!-- ÁRABE -->
                             <input type="checkbox" name="idiomas[]" value="2"> <!-- id do árabe no banco -->
-                            <img src="../assets/img/images/bandeiraArábia.svg" alt="Árabe">
+                            <img src="../assets/img/images/bandeiraArabia.svg" alt="Árabe">
                         </label>
                     </div>
                 </div>

@@ -1,0 +1,159 @@
+/* --------------- ESTILIZANDO TELA BASE --------------- */
+.pagina {
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--branco);
+}
+
+.conteudo {
+    flex: 1;
+    padding: clamp(20px, 3vw, 40px);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+    background-color: var(--azul-secundario);
+    color: var(--branco);
+}
+
+/* --- Título da página --- */
+.conteudo > h1{
+    align-items: start;
+}
+
+/* --------------- PRIMEIRA LINHA (IMAGEM E CARD FINANCEIRO) --------------- */
+.topLine{
+    width: 90%;
+    height: 250px;
+    display: flex;
+    gap: 50px;
+}
+
+.imagemDash{
+    width: 900px;
+    height: 250px;
+    background-color: rgb(131, 131, 131);
+}
+
+.cardFinanceiro{
+    width: 400px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--escuro);
+    border-radius: 20px;
+    color: var(--branco);
+    padding: 30px;
+    gap: 20px;
+}
+
+/* --- Texto "acessar" --- */
+.acessar{
+    font-size: 20px;
+}
+
+/* --- "Texto financeiro" --- */
+.fin{
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+/* --- Botões financeiro --- */
+.buttonsFin{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* --- Tamanho dos botões --- */
+.btn-tamanho{
+    width: 300px;
+    height: 35px;
+}
+
+/* --------------- SEGUNDA LINHA (CARDS ALUNO, TURMAS E PROFESSORES) --------------- */
+.twoLine{
+    width: 90%;
+    height: 300px;
+    display: flex;
+    gap: 75px;
+}
+
+/* --- Base do card --- */
+.cardDash{
+    width: 400px;
+    height: 300px;
+    display: flex;
+    border-radius: 30px;
+    background-color: var(--escuro);
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 50px;
+}
+
+/* --- Conteúdo dos cards --- */
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+   
+}
+
+/* --- Textos dentro do card --- */
+.textContent{
+    color: var(--branco);
+  
+}
+
+/* --- Título de total dentro do card --- */
+.total{
+    font-size: 20px;
+}
+
+/* --- Número da contagem --- */
+.cont{
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+/* --- Agrupamento botões --- */
+.buttonsContent{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* --- Estilizando botão --- */
+.stat-link {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    color: var(--branco);
+    gap: 10px;
+    text-decoration: none;
+    background: var(--azul-secundario);
+    border-radius: 8px;
+    padding: 5px 10px;
+    transition: 0.2s;
+}
+
+.stat-link:hover {
+    background: var(--laranja);
+}
+
+/* --- Imagem dentro do botão --- */
+.stat-link img {
+    width: 16px;
+    height: 16px;
+}
+
+/* --- Grande imagem do lado do conteúdo do card --- */
+.imageContent{
+    width: 100px;
+    height: 150px;
+}
