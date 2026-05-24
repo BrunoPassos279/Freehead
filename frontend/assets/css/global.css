@@ -193,13 +193,12 @@ a {
 .sidebar-search-icon {
     flex-shrink: 0;
     opacity: 0.8;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     gap: 10px;
     background-color: #1e3a5f;
     border-radius: 8px;
     padding: 8px;
-    width: 100%;
     margin-bottom: 20px;
 }
 

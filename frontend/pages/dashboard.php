@@ -11,7 +11,7 @@
 <body>
 
     <div class="pagina">
-<<<<<<< HEAD
+
         <?php require_once '../includes/sidebar.inc.php'; ?>
 
         <main class="conteudo">
@@ -23,8 +23,9 @@
                 <img class="imagemDash" src="" alt="">
                 <div class="cardFinanceiro">
                     <div class="text">
-                        <p class="acessar">Acessar</p>
+                        <p class="acessar">Acessar...</p>
                         <p class="fin">Financeiro</p>
+                        <img src="Dinhero" alt="">
                     </div>
                     <div class="buttonsFin">
                         <?php $btnLabel = "Novo pagamento"; $btnClass = "btn-laranja btn-tamanho"; ?>
@@ -40,15 +41,15 @@
             <div class="twoLine">
 
                 <!-- Card alunos -->
-                <div class="cardDash">
-                    <div class="content">
+                    <div class="cardDash">
+                        <div class="content">
                         <div class="textContent">
                             <p class="total">Total de alunos</p>
                             <p class="cont">000</p>
                         </div>
                         <div class="buttonsContent">
                             <a href="alunos.php" class="stat-link"><img src="../assets/img/icons/infoStudent.svg" alt="">Lista de alunos...</a>
-                            <a href="alunos.php?acao=adicionar" class="stat-link"><img src="../assets/img/icons/addStudent.svg" alt="">Novo aluno...</a>
+                            <a href="alunos.php?acao=adicionar" class="stat-link"><img src="../assets/img/icons/addStudent.svg" alt="">Adiciona aluno...</a>
                         </div>
                     </div>
                     <!-- Ícone do lado dos textos no card -->
@@ -64,7 +65,7 @@
                         </div>
                         <div class="buttonsContent">
                             <a href="turmas.php" class="stat-link"><img src="../assets/img/icons/infoClass.svg" alt="">Lista de turmas...</a>
-                            <a href="turmas.php?acao=adicionar" class="stat-link"><img src="../assets/img/icons/addClass.svg" alt="">Nova turma...</a>
+                            <a href="turmas.php?acao=adicionar" class="stat-link"><img src="../assets/img/icons/addClass.svg" alt="">Adicionar turma...</a>
                         </div>
                     </div>
                     <!-- Ícone do lado dos textos no card -->
@@ -81,13 +82,49 @@
                         </div>
                         <div class="buttonsContent">
                             <a href="professores.php" class="stat-link"><img src="../assets/img/icons/infoTeach.svg" alt="">Lista de professores...</a>
-                            <a href="professores.php.php?acao=adicionar" class="stat-link"><img src="../assets/img/icons/addTeach.svg" alt="">Novo professor...</a>
+                            <a href="professores.php.php?acao=adicionar" class="stat-link"><img src="../assets/img/icons/addTeach.svg" alt="">Adicionar professor...</a>
                         </div>
                     </div>
                     <!-- Ícone do lado dos textos no card -->
                     <img class="imageContent" src="../assets/img/icons/bigImageTeach.svg" alt="">
                 </div>
 
+            </div>
+
+            <div class="barraIdiomas">
+                <div class="idioma">
+                    <img src="" alt="">
+                    <span class="contIdioma">0</span>
+                    <span class="nomeIdioma">Inglês</span>
+                </div>
+                <div class="idioma">
+                    <img src="" alt="">
+                    <span class="contIdioma">0</span>
+                    <span class="nomeIdioma">Espanhol</span>
+                </div>
+                <div class="idioma">
+                    <img src="" alt="">
+                    <span class="contIdioma">0</span>
+                    <span class="nomeIdioma">Francês</span>
+                </div>
+                <div class="idioma">
+                    <img src="" alt="">
+                    <span class="contIdioma">0</span>
+                    <span class="nomeIdioma">Alemão</span>
+                </div>
+                <div class="idioma">
+                    <img src="" alt="">
+                    <span class="contIdioma">0</span>
+                    <span class="nomeIdioma">Japonês</span>
+                </div>
+                <div class="idioma">
+                    <img src="" alt="">
+                    <span class="contIdioma">0</span>
+                    <span class="nomeIdioma">Árabe</span>
+                </div>
+                <div class="idioma maisIdiomas">
+                    <span>•••</span>
+                </div>
             </div>
         </main> 
     </div>
