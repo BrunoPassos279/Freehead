@@ -9,34 +9,37 @@
     flex: 1;
     padding: clamp(20px, 3vw, 40px);
     display: flex;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 20px;
     overflow-y: auto;
-    background-color: var(--azul-secundario);
-    color: var(--branco);
+    background-color: var(--branco);
+    color: var(--escuro);
 }
 
 /* --- Título da página --- */
-.conteudo > h1{
-    align-items: start;
+.conteudo > h1 {
+    width: 90%;
+    align-self: flex-start;
+    color: var(--azul-secundario);
 }
 
 /* --------------- PRIMEIRA LINHA (IMAGEM E CARD FINANCEIRO) --------------- */
-.topLine{
+.topLine {
     width: 90%;
     height: 250px;
     display: flex;
     gap: 50px;
 }
 
-.imagemDash{
+.imagemDash {
     width: 900px;
     height: 250px;
     background-color: rgb(131, 131, 131);
 }
 
-.cardFinanceiro{
+.cardFinanceiro {
     width: 400px;
     height: 250px;
     display: flex;
@@ -46,35 +49,45 @@
     color: var(--branco);
     padding: 30px;
     gap: 20px;
+    position: relative;
 }
 
 /* --- Texto "acessar" --- */
-.acessar{
+.acessar {
     font-size: 20px;
 }
 
-/* --- "Texto financeiro" --- */
-.fin{
+/* --- Texto "financeiro" --- */
+.fin {
     font-size: 32px;
     font-weight: bold;
     line-height: 1;
 }
 
+/* --- Ícone cifrão --- */
+.iconFinanceiro {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 60px;
+    opacity: 0.8;
+}
+
 /* --- Botões financeiro --- */
-.buttonsFin{
+.buttonsFin {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
 /* --- Tamanho dos botões --- */
-.btn-tamanho{
+.btn-tamanho {
     width: 300px;
     height: 35px;
 }
 
 /* --------------- SEGUNDA LINHA (CARDS ALUNO, TURMAS E PROFESSORES) --------------- */
-.twoLine{
+.twoLine {
     width: 90%;
     height: 300px;
     display: flex;
@@ -82,7 +95,7 @@
 }
 
 /* --- Base do card --- */
-.cardDash{
+.cardDash {
     width: 400px;
     height: 300px;
     display: flex;
@@ -95,34 +108,32 @@
 }
 
 /* --- Conteúdo dos cards --- */
-.content{
+.content {
     display: flex;
     flex-direction: column;
     gap: 15px;
     justify-content: center;
-   
 }
 
 /* --- Textos dentro do card --- */
-.textContent{
+.textContent {
     color: var(--branco);
-  
 }
 
 /* --- Título de total dentro do card --- */
-.total{
+.total {
     font-size: 20px;
 }
 
 /* --- Número da contagem --- */
-.cont{
+.cont {
     font-size: 30px;
     font-weight: bold;
     line-height: 1;
 }
 
 /* --- Agrupamento botões --- */
-.buttonsContent{
+.buttonsContent {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -153,7 +164,48 @@
 }
 
 /* --- Grande imagem do lado do conteúdo do card --- */
-.imageContent{
+.imageContent {
     width: 100px;
     height: 150px;
+}
+
+/* --------------- BARRA DE IDIOMAS --------------- */
+.barraIdiomas {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--escuro);
+    border-radius: 0 0 20px 20px;
+    padding: 15px 25px;
+}
+.idioma {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    color: var(--branco);
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.contIdioma {
+    color: var(--branco);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.maisIdiomas {
+    margin-left: auto;
+    background: transparent;
+    font-size: 30px;
+    letter-spacing: 2px;
 }
