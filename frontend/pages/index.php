@@ -30,7 +30,16 @@
         <!---------------- LADO DIREITO ---------------->
         <div class="ladoDireito">
 
-            <form class="form" action="">
+            <?php if (isset($_GET['erro'])): ?>
+                <p class="erro">
+                    <?php
+                        if ($_GET['erro'] == 1) echo "Email ou senha inválidos.";
+                        if ($_GET['erro'] == 2) echo "Preencha todos os campos.";
+                    ?>
+                </p>
+            <?php endif; ?>
+
+            <form class="form" action="../includes/login.inc.php" method="POST">
                 <h2>Acessar escola</h2>
 
                 <div class="inputs">
@@ -40,7 +49,7 @@
 
                     <!-- Input senha -->
                     <?php $inputId = "senha"; $inputLabel = "Senha"; $inputTipo = "password"; $inputPlaceholder = "Digite a sua senha..."; ?>
-                    <?php include '../includes/input.inc.php'; ?> 
+                    <?php include '../includes/input.inc.php'; ?>
                 </div>
 
                 <div class="botoes">
