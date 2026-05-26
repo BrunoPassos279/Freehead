@@ -1,211 +1,175 @@
 /* --------------- ESTILIZANDO TELA BASE --------------- */
-.pagina {
+.pagina{
     display: flex;
-    min-height: 100vh;
-    background-color: var(--branco);
+    overflow: hidden;
+    margin-left: 13%;
 }
 
-.conteudo {
-    flex: 1;
-    padding: clamp(20px, 3vw, 40px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 20px;
-    overflow-y: auto;
-    background-color: var(--branco);
-    color: var(--escuro);
+main{
+    width: 87%;
+    padding: 50px;
 }
 
-/* --- Título da página --- */
-.conteudo > h1 {
-    width: 90%;
-    align-self: flex-start;
-    color: var(--azul-secundario);
-}
-
-/* --------------- PRIMEIRA LINHA (IMAGEM E CARD FINANCEIRO) --------------- */
-.topLine {
-    width: 90%;
-    height: 250px;
-    display: flex;
-    gap: 50px;
-}
-
-.imagemDash {
-    width: 900px;
-    height: 250px;
-    background-color: rgb(131, 131, 131);
-}
-
-.cardFinanceiro {
-    width: 400px;
-    height: 250px;
+/*---------------- Boas vindas do usuário ----------------*/
+.boasVindas{
     display: flex;
     flex-direction: column;
-    background-color: var(--escuro);
-    border-radius: 20px;
-    color: var(--branco);
-    padding: 30px;
-    gap: 20px;
-    position: relative;
+    line-height: 1.2;
+    color: var(--azul-principal);
+    margin-bottom: 50px;
 }
 
-/* --- Texto "acessar" --- */
-.acessar {
-    font-size: 20px;
-}
+/* --------------- BOTÃO DE LOGOUT --------------- */
 
-/* --- Texto "financeiro" --- */
-.fin {
-    font-size: 32px;
-    font-weight: bold;
-    line-height: 1;
-}
-
-/* --- Ícone cifrão --- */
-.iconFinanceiro {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    width: 60px;
-    opacity: 0.8;
-}
-
-/* --- Botões financeiro --- */
-.buttonsFin {
+.boasVindasTopo {
     display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-/* --- Tamanho dos botões --- */
-.btn-tamanho {
-    width: 300px;
-    height: 35px;
-}
-
-/* --------------- SEGUNDA LINHA (CARDS ALUNO, TURMAS E PROFESSORES) --------------- */
-.twoLine {
-    width: 90%;
-    height: 300px;
-    display: flex;
-    gap: 75px;
-}
-
-/* --- Base do card --- */
-.cardDash {
-    width: 400px;
-    height: 300px;
-    display: flex;
-    border-radius: 30px;
-    background-color: var(--escuro);
-    padding: 20px;
     justify-content: space-between;
     align-items: center;
-    padding-right: 50px;
+    gap: 20px;
 }
 
-/* --- Conteúdo dos cards --- */
-.content {
+.btnLogout {
+    padding: 10px 22px;
+    border-radius: 8px;
+    background-color: var(--laranja);
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.btnLogout:hover {
+    background-color: var(--azul-secundario);
+}
+
+/* --------------- FIM BOTÃO DE LOGOUT --------------- */
+
+/*----- Conteúdo do dash -----*/
+.content{
+    display: flex;
+    gap: 55px;
+}
+
+/*----- Lado esquerdo conteúdo (Todos os cards) -----*/
+.objetosLinks{
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    justify-content: center;
+    gap: 50px;
+
 }
 
-/* --- Textos dentro do card --- */
-.textContent {
-    color: var(--branco);
+/*----- Três cards iniciais -----*/
+.contagem{
+    display: flex;
+    gap: 45px;
 }
 
-/* --- Título de total dentro do card --- */
-.total {
-    font-size: 20px;
+/*----- Card inicial estilização -----*/
+.cardContagem{
+    display: flex;
+    width: 300px;
+    height: 170px;
+    border: 2px solid rgba(10, 26, 50, 0.5);
+    border-radius: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    padding-right: 40px;
+    box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* --- Número da contagem --- */
-.cont {
-    font-size: 30px;
+.cardContagem:hover{
+    scale: 0.98;
+    cursor: pointer;
+}
+
+.textCard{
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    gap: 5px;
+    font-weight: bold;
+    color: var(--laranja);
+}
+
+.textCard span{
+    font-size: 50px;
     font-weight: bold;
     line-height: 1;
+    color: var(--azul-principal);
 }
 
-/* --- Agrupamento botões --- */
-.buttonsContent {
+.cardContagem img{
+    width: 70px;
+}
+
+#imgAluno{
+    width: 35px;
+}
+/*----- Fim Card inicial estilização -----*/
+
+/*----- Cards de acesso rápido -----*/
+.acesso{
     display: flex;
     flex-direction: column;
-    gap: 10px;
 }
 
-/* --- Estilizando botão --- */
-.stat-link {
+.acesso h3{
+    padding-left: 20px;
+    font-size: 25px;
+}
+
+.acessoBloco{
     display: flex;
-    align-items: center;
-    justify-content: start;
-    color: var(--branco);
-    gap: 10px;
-    text-decoration: none;
-    background: var(--azul-secundario);
-    border-radius: 8px;
-    padding: 5px 10px;
-    transition: 0.2s;
+    gap: 70px;
+    margin-top: 15px;
 }
 
-.stat-link:hover {
-    background: var(--laranja);
-}
-
-/* --- Imagem dentro do botão --- */
-.stat-link img {
-    width: 16px;
-    height: 16px;
-}
-
-/* --- Grande imagem do lado do conteúdo do card --- */
-.imageContent {
-    width: 100px;
-    height: 150px;
-}
-
-/* --------------- BARRA DE IDIOMAS --------------- */
-.barraIdiomas {
-    width: 90%;
+.cardAcesso{
     display: flex;
-    align-items: center;
-    gap: 10px;
-    background-color: var(--escuro);
-    border-radius: 0 0 20px 20px;
-    padding: 15px 25px;
-}
-.idioma {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 6px 14px;
+    flex-direction: column;
+    width: 460px;
+    height: 200px;
+    align-items: start;
+    border: 2px solid rgba(10, 26, 50, 0.5);
     border-radius: 20px;
-    color: var(--branco);
-    font-size: 14px;
-    font-weight: 300;
+    padding: 40px;
+    padding-right: 40px;
+    gap: 20px;
+    box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.contIdioma {
-    color: var(--branco);
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
+.cardAcesso:hover{
+    scale: 0.98;
+    cursor: pointer;
+    border-color: var(--laranja);
+    color: var(--laranja);
+}
 
+.cardAcesso:hover .textAcessoCard{
+    color: var(--laranja);
+}
+
+.imgLinkAcesso{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    font-weight: bold;
+    width: 100%;
+    justify-content: space-between;
 }
 
-.maisIdiomas {
-    margin-left: auto;
-    background: transparent;
-    font-size: 30px;
-    letter-spacing: 2px;
+.imgLinkAcesso img{
+    width: 40px;
+    height: 40px;
 }
+
+.imgLinkAcesso .setaLink{
+    width: 15px;
+}
+
+.textAcessoCard{
+    display: flex;
+    line-height: 1;
+    gap: 5px;
+    flex-direction: column;
+    color: var(--azul-principal)
+}
+/*----- Fim Cards de acesso rápido -----*/

@@ -1,4 +1,81 @@
-<!-- pages/dashboard.php -->
+<?php
+    //---------------- Incluindo autenticação ----------------//
+    // Esse arquivo inicia a sessão e permite validar o login
+    require_once '../includes/auth.inc.php';
+
+    //---------------- Validando sessão ----------------//
+    // Se o usuário não estiver logado, volta para a tela de login
+    validarSessao();
+
+    //---------------- ID da escola logada ----------------//
+    // Usado para filtrar os dados do JSON temporário
+    $idEscolaLogada = getEscolaLogadaId();
+
+    //---------------- Banco temporário JSON ----------------//
+    // Esse JSON será usado apenas enquanto o banco real ainda não estiver conectado
+    $caminhoJson = __DIR__ . '/dados.json';
+
+    $dados = [];
+
+    //---------------- Lendo dados do JSON ----------------//
+    if (file_exists($caminhoJson)) {
+        $json = file_get_contents($caminhoJson);
+        $dados = json_decode($json, true);
+    }
+
+//---------------- Separando tabelas do JSON ----------------//
+$escolas     = $dados['escolas'] ?? [];
+$alunos      = $dados['alunos'] ?? [];
+$professores = $dados['professores'] ?? [];
+$turmas      = $dados['turmas'] ?? [];
+$matriculas  = $dados['matriculas'] ?? [];
+
+//---------------- Buscando dados da escola atual ----------------//
+$escolaAtual = null;
+
+foreach ($escolas as $escola) {
+    if ($escola['id_escola'] == $idEscolaLogada) {
+        $escolaAtual = $escola;
+        break;
+    }
+}
+
+//---------------- Nome do gestor ----------------//
+$nomeGestor = $escolaAtual['gestor'] ?? 'Gestor';
+
+//---------------- Filtrando turmas da escola logada ----------------//
+$turmasDaEscola = array_filter($turmas, function ($turma) use ($idEscolaLogada) {
+    return $turma['id_escola'] == $idEscolaLogada;
+});
+
+//---------------- Pegando os IDs das turmas da escola ----------------//
+$idsTurmasDaEscola = array_column($turmasDaEscola, 'id_turma');
+
+//---------------- Filtrando matrículas ativas da escola ----------------//
+$matriculasAtivas = array_filter($matriculas, function ($matricula) use ($idsTurmasDaEscola) {
+    return in_array($matricula['id_turma'], $idsTurmasDaEscola)
+        && $matricula['status_aluno'] === 'ativo';
+});
+
+//---------------- Pegando alunos ativos sem repetir ----------------//
+$idsAlunosAtivos = array_unique(array_column($matriculasAtivas, 'id_aluno'));
+
+//---------------- Total de alunos ativos ----------------//
+$totalAlunosAtivos = count($idsAlunosAtivos);
+
+//---------------- Total de professores da escola ----------------//
+// No JSON atual professor ainda não tem status, então conta todos da escola
+$totalProfessoresAtivos = count(array_filter($professores, function ($professor) use ($idEscolaLogada) {
+    return $professor['id_escola'] == $idEscolaLogada;
+}));
+
+//---------------- Total de turmas ativas ----------------//
+$totalTurmasAtivas = count(array_filter($turmas, function ($turma) use ($idEscolaLogada) {
+    return $turma['id_escola'] == $idEscolaLogada
+        && $turma['status'] === 'ativa';
+}));
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -11,168 +88,133 @@
 </head>
 <body>
 
-    <?php
-    require_once '../includes/auth.inc.php';
-    require_once '../includes/conexao.inc.php';
-
-    // ============================================
-    // TODO: CRUD — buscar total de alunos
-    // Tabela: alunos
-    // Filtro: id_escola = $_SESSION['id_escola']
-    // Resultado esperado: $totalAlunos (int)
-    // ============================================
-    $totalAlunos = 0;
-
-    // ============================================
-    // TODO: CRUD — buscar total de turmas
-    // Tabela: turmas
-    // Filtro: id_escola = $_SESSION['id_escola']
-    // Resultado esperado: $totalTurmas (int)
-    // ============================================
-    $totalTurmas = 0;
-
-    // ============================================
-    // TODO: CRUD — buscar total de professores
-    // Tabela: professores JOIN professor_idioma JOIN idiomas_escolas
-    // Filtro: id_escola = $_SESSION['id_escola']
-    // Resultado esperado: $totalProfessores (int)
-    // ============================================
-    $totalProfessores = 0;
-
-    // ============================================
-    // TODO: CRUD — buscar idiomas da escola com contagem de alunos por idioma
-    // Tabelas: idiomas_escolas, idiomas, matriculas, turmas, niveis
-    // Filtro: id_escola = $_SESSION['id_escola']
-    // Resultado esperado: $idiomas (array com nome, bandeira, contagem)
-    // ============================================
-    $idiomas = [];
-    ?>
-
+    <!---------------- TELA ---------------->
     <div class="pagina">
-
         <?php require_once '../includes/sidebar.inc.php'; ?>
 
+        <!---------------- Boas vindas do usuário ---------------->
         <main class="conteudo">
-            <h1>Seja bem vindo <span class="usuario"><?php echo htmlspecialchars($_SESSION['nome']); ?>!</span></h1>
-
-            <!-- Imagem e card financeiro -->
-            <div class="topLine">
-
-                <img class="imagemDash" src="" alt="">
-                <div class="cardFinanceiro">
-                    <div class="text">
-                        <p class="acessar">Acessar...</p>
-                        <p class="fin">Financeiro</p>
+            <div class="boasVindas">
+                <!---------------- Cabeçalho do dashboard ---------------->
+                <div class="boasVindasTopo">
+                    <div>
+                        <h1>Olá <?php echo htmlspecialchars($nomeGestor); ?>! 👋</h1>
+                        <p>Aqui está o panorama da sua escola hoje.</p>
                     </div>
-                    <img class="iconFinanceiro" src="../assets/img/icons/cifrao.svg" alt="Ícone cifrão">
-                    <div class="buttonsFin">
-                        <?php $btnLabel = "Novo pagamento"; $btnClass = "btn-laranja btn-tamanho"; ?>
-                        <?php include '../includes/btn.inc.php'; ?>
 
-                        <?php $btnLabel = "Gerenciamento"; $btnClass = "btn-branco btn-tamanho"; ?>
-                        <?php include '../includes/btn.inc.php'; ?>
-                    </div>
+                    <!---------------- Botão de logout ---------------->
+                    <a href="../actions/logout.act.php" class="btnLogout">
+                        Sair
+                    </a>
                 </div>
             </div>
 
-            <!-- Cards de alunos, turmas e professores -->
-            <div class="twoLine">
+            <!----- Conteúdo do dash ----->
+            <div class="content">
 
-                <!-- Card alunos -->
-                <div class="cardDash">
-                    <div class="content">
-                        <div class="textContent">
-                            <p class="total">Alunos...</p>
-                            <p class="cont"><?php echo $totalAlunos; ?></p>
-                        </div>
-                        <div class="buttonsContent">
-                            <a href="alunos.php" class="stat-link"><img src="../assets/img/icons/infoStudent.svg" alt="">Lista de alunos...</a>
-                            <a href="alunos.php?acao=adicionar" class="stat-link"><img src="../assets/img/icons/addStudent.svg" alt="">Adicionar aluno...</a>
-                        </div>
+                <!----- Lado esquerdo conteúdo (Todos os cards) ----->
+                <div class="objetosLinks">
+
+                    <!----- Três cards iniciais ----->
+                    <div class="contagem">
+                        <a href="../pages/alunos.php" class="cardContagem">
+                            <div class="textCard">
+                                <p>Alunos ativos</p>
+                                <span><?php echo str_pad($totalAlunosAtivos, 3, '0', STR_PAD_LEFT); ?></span>
+                            </div>
+                            <img id="imgAluno" src="../assets/img/icons/bigImageAluno.svg" alt=" ícone de aluno">
+                        </a>
+
+                        <a href="../pages/professores.php" class="cardContagem">
+                            <div class="textCard">
+                                <p>Professores ativos</p>
+                                <span><?php echo str_pad($totalProfessoresAtivos, 3, '0', STR_PAD_LEFT); ?></span>
+                            </div>
+                            <img src="../assets/img/icons/bigImageTeach.svg" alt=" ícone de professor">
+                        </a>
+
+                        <a href="../pages/turmas.php" class="cardContagem">
+                            <div class="textCard">
+                                <p>Turmas ativas</p>
+                                <span><?php echo str_pad($totalTurmasAtivas, 3, '0', STR_PAD_LEFT); ?></span>
+                            </div>
+                            <img src="../assets/img/icons/bigImageClass.svg" alt=" ícone das turmas">
+                        </a>
                     </div>
-                    <!-- Ícone do lado dos textos no card -->
-                    <img class="imageContent" src="../assets/img/icons/bigImageAluno.svg" alt="">
+                    <!----- Fim três cards iniciais ----->
+                    
+                    <!----- Cards acesso rápido ----->
+                     <div class="acesso">
+                        <h3>Acesso rápído</h3>
+                        
+                        <!----- 2 Cards Acesso rápido (Parte de cima) ----->
+                        <div class="acessoBloco">
+                            <a href="../pages/alunos.php" class="cardAcesso">
+                                <div class="imgLinkAcesso">
+                                    <img src="../assets/img/icons/infoAluno.svg" alt="ícone de aluno">
+                                    <img class="setaLink" src="../assets/img/icons/setaLink.svg" alt="Seta diagonal">
+                                </div> 
+                                <div class="textAcessoCard">
+                                    <h2>Alunos</h2>
+                                    <p>Matrículas, frequência e desempenho.</p>
+                                </div>
+                            </a>
+
+                             <a href="../pages/professores.php" class="cardAcesso">
+                                <div class="imgLinkAcesso">
+                                    <img src="../assets/img/icons/IconProf.svg" alt="Ícone de professor">
+                                    <img class="setaLink" src="../assets/img/icons/setaLink.svg" alt="Seta diagonal">
+                                </div> 
+                                <div class="textAcessoCard">
+                                    <h2>Professores</h2>
+                                    <p>Em atuação e seus idiomas trabalhados</p>
+                                </div>
+                            </a>
+                        </div>
+                        <!----- Fim 2 Cards Acesso rápido (Parte de cima) ----->
+                        
+                        <!----- 2 Cards Acesso rápido (Parte de baixo) ----->
+                        <div class="acessoBloco">
+                            <a href="../pages/turmas.php" class="cardAcesso">
+                                <div class="imgLinkAcesso">
+                                    <img src="../assets/img/icons/IconTurma.svg" alt="ícone das turmas">
+                                    <img class="setaLink" src="../assets/img/icons/setaLink.svg" alt="Seta diagonal">
+                                </div> 
+                                <div class="textAcessoCard">
+                                    <h2>Turmas</h2>
+                                    <p>Gerenciamento, mudanças e atualização</p>
+                                </div>
+                            </a>
+
+                             <a href="../pages/financeiro.php" class="cardAcesso">
+                                <div class="imgLinkAcesso">
+                                    <img src="../assets/img/icons/pagamentoIcon.svg" alt="Ícone de $">
+                                    <img class="setaLink" src="../assets/img/icons/setaLink.svg" alt="Seta diagonal">
+                                </div> 
+                                <div class="textAcessoCard">
+                                    <h2>Financeiro</h2>
+                                    <p>Registrar novos pagamentos e históricos</p>
+                                </div>
+                            </a>
+                        </div>
+                        <!----- Fim 2 Cards Acesso rápido (Parte de baixo) ----->
+                    </div>
+                    <!----- Fim Cards acesso rápido ----->
+                
+                <!----- Fim Lado esquerdo conteúdo (Todos os cards) ----->
                 </div>
 
-                <!-- Card turmas -->
-                <div class="cardDash">
-                    <div class="content">
-                        <div class="textContent">
-                            <p class="total">Turmas...</p>
-                            <p class="cont"><?php echo $totalTurmas; ?></p>
-                        </div>
-                        <div class="buttonsContent">
-                            <a href="turmas.php" class="stat-link"><img src="../assets/img/icons/infoClass.svg" alt="">Lista de turmas...</a>
-                            <a href="turmas.php?acao=adicionar" class="stat-link"><img src="../assets/img/icons/addClass.svg" alt="">Adicionar turma...</a>
-                        </div>
-                    </div>
-                    <!-- Ícone do lado dos textos no card -->
-                    <img class="imageContent" src="../assets/img/icons/bigImageClass.svg" alt="">
-                </div>
+                <!----- Imagem institucional ----->
+                <img src="../assets/img/images/marketingFH.svg" alt="Imagem de marketing do Freehead">
 
-                <!-- Card professores -->
-                <div class="cardDash">
-                    <div class="content">
-                        <div class="textContent">
-                            <p class="total">Professores...</p>
-                            <p class="cont"><?php echo $totalProfessores; ?></p>
-                        </div>
-                        <div class="buttonsContent">
-                            <a href="professores.php" class="stat-link"><img src="../assets/img/icons/infoTeach.svg" alt="">Lista de professores...</a>
-                            <a href="professores.php?acao=adicionar" class="stat-link"><img src="../assets/img/icons/addTeach.svg" alt="">Adicionar professor...</a>
-                        </div>
-                    </div>
-                    <!-- Ícone do lado dos textos no card -->
-                    <img class="imageContent" src="../assets/img/icons/bigImageTeach.svg" alt="">
-                </div>
-
+            <!----- Fim Conteúdo do dash ----->
             </div>
+        </main> 
 
-            <!-- Barra de idiomas -->
-            <div class="barraIdiomas">
-                <?php if (!empty($idiomas)): ?>
-                    <?php foreach ($idiomas as $idioma): ?>
-                        <div class="idioma">
-                            <img src="<?php echo htmlspecialchars($idioma['bandeira']); ?>" alt="<?php echo htmlspecialchars($idioma['nome']); ?>">
-                            <span class="contIdioma"><?php echo $idioma['contagem']; ?></span>
-                            <span class="nomeIdioma"><?php echo htmlspecialchars($idioma['nome']); ?></span>
-                        </div>
-                    <?php endforeach; ?>
-                <?php else: ?>
-                    <!-- Fallback enquanto o CRUD não estiver implementado -->
-                    <div class="idioma">
-                        <img src="" alt=""><span class="contIdioma">0</span>
-                        <span class="nomeIdioma">Inglês</span>
-                    </div>
-                    <div class="idioma">
-                        <img src="" alt=""><span class="contIdioma">0</span>
-                        <span class="nomeIdioma">Espanhol</span>
-                    </div>
-                    <div class="idioma">
-                        <img src="" alt=""><span class="contIdioma">0</span>
-                        <span class="nomeIdioma">Francês</span>
-                    </div>
-                    <div class="idioma">
-                        <img src="" alt=""><span class="contIdioma">0</span>
-                        <span class="nomeIdioma">Alemão</span>
-                    </div>
-                    <div class="idioma">
-                        <img src="" alt=""><span class="contIdioma">0</span>
-                        <span class="nomeIdioma">Japonês</span>
-                    </div>
-                    <div class="idioma">
-                        <img src="" alt=""><span class="contIdioma">0</span>
-                        <span class="nomeIdioma">Árabe</span>
-                    </div>
-                <?php endif; ?>
-                <div class="idioma maisIdiomas">
-                    <span>•••</span>
-                </div>
-            </div>
+    <!---------------- FIM DA TELA ---------------->
+    </div>  
 
-        </main>
-    </div>
-
+    <!---------------- Efeito do sidebar sobre a página que está aberta ---------------->
     <script src="../assets/js/sidebar.js"></script>
 </body>
 </html>

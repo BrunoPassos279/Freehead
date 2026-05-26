@@ -2,7 +2,7 @@
 .pagelog {
     height:100vh;
     display: flex;
-    background-color: var(--azul-secundario);
+    background-color: var(--escuro);
     overflow: hidden;
 }
 
@@ -92,4 +92,11 @@
     width: 100%;
     max-width: 500px;
     height: 40px;
+}
+
+/* ----- Mensagem de erro do login ----- */
+.mensagem-erro {
+    color: #c0392b;
+    font-size: 14px;
+    text-align: center;
 }

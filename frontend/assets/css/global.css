@@ -12,6 +12,7 @@ html, body {
     font-family:var(--font-principal);
 }
 
+
 /* -------------------------------------------- ESTILO LOGOTIPO ---------------------------------------------------- */
 .logo {
     width: clamp(120px, 15vw, 200px);
@@ -111,52 +112,74 @@ a {
     transition: background-color 5000s ease-in-out 0s;
 }
 
-/* ===== SIDEBAR ===== */
+/* --------------------------SIDEBAR -------------------------------------------- */
 .sidebar {
-    width: 70px;
-    min-height: 100vh;
+    position: fixed; /* Força o elemento a ficar travado na tela */
+    top: 0;          /* Alinha no topo */
+    left: 0;         /* Alinha na esquerda */
+    z-index: 1000;   /* Garante que o sidebar vai ficar por cima do conteúdo */
+    
+    width: 13%;
+    height: 100vh;   /* Mudamos de min-height para height para travar o tamanho da tela */
     background-color: var(--escuro);
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px 0;
     transition: width 0.3s ease;
-    overflow: hidden;
-    flex-shrink: 0;
+    overflow-x: hidden;
+    overflow-y: auto; /* Se o menu tiver muitos itens, rola apenas dentro dele */
 }
 
-.sidebar:hover {
-    width: 250px;
-    align-items: flex-start;
-    padding: 20px 15px;
+/* --------------- SUGESTÕES DA BUSCA --------------- */
+
+.sidebar-search {
+    position: relative;
 }
 
-/* Esconde labels quando fechada */
-.sidebar-label {
+.sugestoes-busca {
     display: none;
-    white-space: nowrap;
-    opacity: 0;
-    transition: opacity 0.2s ease;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    width: 100%;
+    background-color: var(--branco);
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    z-index: 999;
 }
 
-.sidebar:hover .sidebar-label {
-    display: block;
-    opacity: 1;
+.sugestao-aluno {
+    padding: 10px 14px;
+    font-size: 14px;
+    color: var(--escuro);
+    cursor: pointer;
+    transition: 0.2s ease;
 }
+
+.sugestao-aluno:hover {
+    background-color: var(--laranja);
+    color: var(--branco);
+}
+
+.sugestao-vazia {
+    padding: 10px 14px;
+    font-size: 13px;
+    color: #888;
+}
+
+/* --------------- FIM SUGESTÕES DA BUSCA --------------- */
 
 /* Avatar */
 .sidebar-user {
+    width: 100%;
     display: flex;
     align-items: center;
     gap: 12px;
     margin-bottom: 15px;
-    width: 100%;
-    justify-content: center;
-}
-
-.sidebar:hover .sidebar-user{
-    justify-content: start;
-
+    padding-left: 15px;
+    margin-bottom: 15px;
 }
 
 .sidebar-avatar {
@@ -164,10 +187,10 @@ a {
     height: 40px;
     border-radius: 50%;
     background-color:var(--azul-secundario);
-    background-color: #1e3a5f;
     flex-shrink: 0;
 }
 
+/* Texto com o nome do usuário */
 .sidebar-user .sidebar-label {
     color: var(--branco);
     font-size: var(--texto-tamanho);
@@ -175,49 +198,44 @@ a {
 
 /* Busca */
 .sidebar-search {
+    width: 90%;
+    height: 40px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    background-color: var(--azul-principal);
-    gap: 10px;
-    border-radius: 50px;
+    align-items: center;
     padding: 8px;
-    width: 60%;
-    margin-bottom: 20px;
+    padding-left: 20px;
+    gap: 20px;
+    border-radius: 12px;
+    background-color: var(--azul-secundario);
+    margin-bottom: 40px;
 }
 
-.sidebar:hover .sidebar-search{
-    width: 100%;
+.sidebar-search:hover{
+    background-color: var(--azul-principal)
 }
 
+/*Icone de lupa*/
 .sidebar-search-icon {
-    flex-shrink: 0;
-    opacity: 0.8;
-    width: 30px;
-    height: 30px;
-    gap: 10px;
-    background-color: #1e3a5f;
-    border-radius: 8px;
-    padding: 8px;
-    margin-bottom: 20px;
+    width: 16px;
+    height: 16px;
 }
 
+/*Texto do input*/
 .sidebar-search input {
     border: none;
     background: transparent;
     color: var(--branco);
-    font-size: var(--texto-tamanho);
     outline: none;
-    width: 0;
     transition: width 0.3s ease;
 }
 
-.sidebar:hover .sidebar-search input {
-    width: 160px;
-    display: block;
+/*Texto do input antes de ser digitado*/
+.sidebar-search input::placeholder {
+    color: var(--branco);
 }
 
-/* Nav */
+/* Nav de botões para páginas */
 .sidebar-nav {
     display: flex;
     flex-direction: column;
@@ -226,6 +244,7 @@ a {
     flex: 1;
 }
 
+/*Item específico do nav*/
 .sidebar-item {
     display: flex;
     align-items: center;
@@ -238,13 +257,13 @@ a {
     width: 100%;
     justify-content: start;
     margin-left: 10px;
-    
 }
 
 .sidebar-item:hover {
     background-color: #1e3a5f;
 }
 
+/*Icone do botão para página NAV*/
 .sidebar-item img {
     width: 24px;
     height: 24px;
@@ -255,23 +274,14 @@ a {
     font-size: var(--texto-tamanho);
 }
 
-/* Footer */
+/* Footer do SIDEBAR*/
 .sidebar-footer {
-    margin-top: auto;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.sidebar-logo-small {
-    width: 40px;
-    flex-shrink: 0;
-}
-
-.sidebar:hover .sidebar-logo-small {
-    display: none;
-}
 
 .sidebar-logo-full {
     width: 120px;

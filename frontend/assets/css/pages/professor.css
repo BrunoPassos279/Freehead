@@ -1,0 +1,131 @@
+/* --------------- ESTILIZANDO TELA BASE --------------- */
+.pagina{
+    display: flex;
+    overflow: hidden;
+    margin-left: 13%;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    width: 87%;
+    padding: 80px;
+    gap: 40px;
+}
+
+.introPage{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.textIntroPage{
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    gap: 5px;
+    color: var(--azul-principal);
+    padding-left: 20px;
+}
+
+.textIntroPage h1{
+    font-size: 35px
+}
+
+.textIntroPage p{
+    font-size: 16px;
+}
+
+.btn-tamanho{
+    width: 250px;
+    height: 35px;
+}
+
+.btn-laranja:hover {
+    background-color: var(--azul-secundario);
+    border: 2px solid var(--azul-secundario);
+}
+/* --------------- FIM ESTILIZANDO TELA BASE --------------- */
+
+
+.cardsProf{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    width: 100%;
+    height: 100%;
+}
+
+.cardProf{
+    display: flex;
+    flex-direction: column;
+    width: 480px;
+    height: 280px;
+    padding: 20px;
+    border: 2px solid var(--cinza);
+    border-radius: 50px;
+    gap: 40px;
+    transition: width 0.5s ease, background-color 0.5s ease;
+}
+.cardProf:hover{
+    background-color: var(--laranja);
+    color: var(--branco);
+    scale: 0.98;
+    border: var(--laranja);
+    cursor: pointer;
+}
+
+.cardProf:hover .identificacao{
+    color: var(--branco);
+}
+
+.cardProf:hover .idiomas{
+    color: var(--branco);
+}
+
+.cardProf:hover .contagemClasses{
+    color: var(--branco);
+}
+
+.cardProf:hover .contagemClasses hr{
+    background-color: var(--branco);
+}
+
+.identificacao{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    color: var(--escuro);
+}
+
+.idiomas{
+    display: flex;
+    gap: 10px;
+    color: var(--escuro);
+}
+
+.contagemClasses{
+    display: flex;
+    flex-direction: column;
+    font-weight: 1;
+    gap: 5px;
+    color: var(--escuro);
+}
+
+.contagemClasses p{
+    font-size: 14px;
+    line-height: 1;
+}
+
+.contagemClasses h5{
+    font-size: 30px;
+    line-height: 1;
+}
+
+.contagemClasses hr{
+    border: 0;
+    height: 2px;
+    background-color:var(--cinza); 
+    margin-bottom: 10px;
+}

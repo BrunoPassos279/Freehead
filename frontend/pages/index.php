@@ -1,3 +1,37 @@
+<?php
+//---------------- Incluindo autenticação ----------------//
+// Se o usuário já estiver logado, ele será enviado direto para o dashboard
+require_once '../includes/auth.inc.php';
+
+redirecionarSeLogado();
+
+//---------------- Mensagem de erro do login ----------------//
+// Define uma mensagem amigável de acordo com o erro recebido pela URL
+$mensagemErro = '';
+
+if (isset($_GET['erro'])) {
+    if ($_GET['erro'] === 'campos_vazios') {
+        $mensagemErro = 'Preencha o e-mail e a senha.';
+    }
+
+    if ($_GET['erro'] === 'credenciais_invalidas') {
+        $mensagemErro = 'E-mail ou senha inválidos.';
+    }
+
+    if ($_GET['erro'] === 'login_obrigatorio') {
+        $mensagemErro = 'Faça login para acessar o sistema.';
+    }
+
+    if ($_GET['erro'] === 'json_nao_encontrado') {
+        $mensagemErro = 'Banco temporário não encontrado.';
+    }
+
+    if ($_GET['erro'] === 'json_invalido') {
+        $mensagemErro = 'Banco temporário inválido.';
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -30,16 +64,7 @@
         <!---------------- LADO DIREITO ---------------->
         <div class="ladoDireito">
 
-            <?php if (isset($_GET['erro'])): ?>
-                <p class="erro">
-                    <?php
-                        if ($_GET['erro'] == 1) echo "Email ou senha inválidos.";
-                        if ($_GET['erro'] == 2) echo "Preencha todos os campos.";
-                    ?>
-                </p>
-            <?php endif; ?>
-
-            <form class="form" action="../includes/login.inc.php" method="POST">
+            <form class="form" action="../actions/login.act.php" method="POST">
                 <h2>Acessar escola</h2>
 
                 <div class="inputs">
@@ -49,7 +74,7 @@
 
                     <!-- Input senha -->
                     <?php $inputId = "senha"; $inputLabel = "Senha"; $inputTipo = "password"; $inputPlaceholder = "Digite a sua senha..."; ?>
-                    <?php include '../includes/input.inc.php'; ?>
+                    <?php include '../includes/input.inc.php'; ?> 
                 </div>
 
                 <div class="botoes">
@@ -60,6 +85,11 @@
                     <?php $btnLabel = "Criar conta"; $btnClass = "btn-branco btn-tamanho"; $btnLink = "../pages/cadastroEscola.php"; ?>
                     <?php include '../includes/btn.inc.php'; ?>
                 </div>
+                <?php if (!empty($mensagemErro)): ?>
+                    <p class="mensagem-erro">
+                <?php echo htmlspecialchars($mensagemErro); ?>
+                    </p>
+                <?php endif; ?>
             </form>
         </div>
         <!---------------- FIM DO LADO DIREITO ---------------->

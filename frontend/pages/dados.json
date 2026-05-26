@@ -1,0 +1,1021 @@
+{
+  "idiomas": [
+    {
+      "id_idioma": 1,
+      "nome": "Inglês",
+      "bandeira": "ingles.png"
+    },
+    {
+      "id_idioma": 2,
+      "nome": "Espanhol",
+      "bandeira": "espanhol.png"
+    },
+    {
+      "id_idioma": 3,
+      "nome": "Francês",
+      "bandeira": "frances.png"
+    },
+    {
+      "id_idioma": 4,
+      "nome": "Alemão",
+      "bandeira": "alemao.png"
+    },
+    {
+      "id_idioma": 5,
+      "nome": "Italiano",
+      "bandeira": "italiano.png"
+    },
+    {
+      "id_idioma": 6,
+      "nome": "Japonês",
+      "bandeira": "japones.png"
+    },
+    {
+      "id_idioma": 7,
+      "nome": "Mandarim",
+      "bandeira": "mandarim.png"
+    },
+    {
+      "id_idioma": 8,
+      "nome": "Coreano",
+      "bandeira": "coreano.png"
+    },
+    {
+      "id_idioma": 9,
+      "nome": "Português",
+      "bandeira": "portugues.png"
+    },
+    {
+      "id_idioma": 10,
+      "nome": "Russo",
+      "bandeira": "russo.png"
+    }
+  ],
+  "escolas": [
+    {
+      "id_escola": 1,
+      "nome_escola": "Freehead",
+      "gestor": "Bruno",
+      "cnpj": "12.345.678/0001-90",
+      "telefone": "(11) 91234-5678",
+      "email": "bruno@teste.com",
+      "senha": "$2y$12$5FbW25C7WiDAei3ELjO1yu7ocumJHdTVjDsSocZDgzwsL4l9MZtNy",
+      "data_criacao": "2023-03-15"
+    },
+    {
+      "id_escola": 2,
+      "nome_escola": "Freehead Campinas",
+      "gestor": "Rebeca",
+      "cnpj": "98.765.432/0001-11",
+      "telefone": "(19) 98765-4321",
+      "email": "freehead@teste.com",
+      "senha": "$2y$12$5FbW25C7WiDAei3ELjO1yu7ocumJHdTVjDsSocZDgzwsL4l9MZtNy",
+      "data_criacao": "2024-01-10"
+    }
+  ],
+  "idiomas_escolas": [
+    {
+      "id_escola": 1,
+      "id_idioma": 1
+    },
+    {
+      "id_escola": 1,
+      "id_idioma": 2
+    },
+    {
+      "id_escola": 1,
+      "id_idioma": 3
+    },
+    {
+      "id_escola": 2,
+      "id_idioma": 1
+    },
+    {
+      "id_escola": 2,
+      "id_idioma": 4
+    },
+    {
+      "id_escola": 1,
+      "id_idioma": 5
+    },
+    {
+      "id_escola": 1,
+      "id_idioma": 6
+    },
+    {
+      "id_escola": 1,
+      "id_idioma": 7
+    },
+    {
+      "id_escola": 2,
+      "id_idioma": 2
+    },
+    {
+      "id_escola": 2,
+      "id_idioma": 5
+    },
+    {
+      "id_escola": 2,
+      "id_idioma": 8
+    }
+  ],
+  "niveis": [
+    {
+      "id_nivel": 1,
+      "id_escola": 1,
+      "id_idioma": 1,
+      "nome_nivel": "Básico",
+      "ordem": 1
+    },
+    {
+      "id_nivel": 2,
+      "id_escola": 1,
+      "id_idioma": 1,
+      "nome_nivel": "Intermediário",
+      "ordem": 2
+    },
+    {
+      "id_nivel": 3,
+      "id_escola": 1,
+      "id_idioma": 1,
+      "nome_nivel": "Avançado",
+      "ordem": 3
+    },
+    {
+      "id_nivel": 4,
+      "id_escola": 1,
+      "id_idioma": 2,
+      "nome_nivel": "Básico",
+      "ordem": 1
+    },
+    {
+      "id_nivel": 5,
+      "id_escola": 1,
+      "id_idioma": 2,
+      "nome_nivel": "Intermediário",
+      "ordem": 2
+    },
+    {
+      "id_nivel": 6,
+      "id_escola": 1,
+      "id_idioma": 3,
+      "nome_nivel": "Básico",
+      "ordem": 1
+    },
+    {
+      "id_nivel": 7,
+      "id_escola": 2,
+      "id_idioma": 1,
+      "nome_nivel": "Básico",
+      "ordem": 1
+    },
+    {
+      "id_nivel": 8,
+      "id_escola": 2,
+      "id_idioma": 1,
+      "nome_nivel": "Intermediário",
+      "ordem": 2
+    },
+    {
+      "id_nivel": 9,
+      "id_escola": 2,
+      "id_idioma": 4,
+      "nome_nivel": "Básico",
+      "ordem": 1
+    },
+    {
+      "id_nivel": 10,
+      "id_escola": 1,
+      "id_idioma": 3,
+      "nome_nivel": "Intermediário",
+      "ordem": 2
+    },
+    {
+      "id_nivel": 11,
+      "id_escola": 1,
+      "id_idioma": 5,
+      "nome_nivel": "Básico",
+      "ordem": 1
+    },
+    {
+      "id_nivel": 12,
+      "id_escola": 1,
+      "id_idioma": 6,
+      "nome_nivel": "Básico",
+      "ordem": 1
+    },
+    {
+      "id_nivel": 13,
+      "id_escola": 2,
+      "id_idioma": 2,
+      "nome_nivel": "Básico",
+      "ordem": 1
+    },
+    {
+      "id_nivel": 14,
+      "id_escola": 2,
+      "id_idioma": 4,
+      "nome_nivel": "Intermediário",
+      "ordem": 2
+    },
+    {
+      "id_nivel": 15,
+      "id_escola": 2,
+      "id_idioma": 5,
+      "nome_nivel": "Básico",
+      "ordem": 1
+    }
+  ],
+  "professores": [
+    {
+      "id_professor": 1,
+      "id_escola": 1,
+      "nome": "Fernanda Lima"
+    },
+    {
+      "id_professor": 2,
+      "id_escola": 1,
+      "nome": "Ricardo Alves"
+    },
+    {
+      "id_professor": 3,
+      "id_escola": 1,
+      "nome": "Juliana Costa"
+    },
+    {
+      "id_professor": 4,
+      "id_escola": 2,
+      "nome": "Marcos Oliveira"
+    },
+    {
+      "id_professor": 5,
+      "id_escola": 2,
+      "nome": "Patrícia Nunes"
+    },
+    {
+      "id_professor": 6,
+      "id_escola": 1,
+      "nome": "Camila Rocha"
+    },
+    {
+      "id_professor": 7,
+      "id_escola": 1,
+      "nome": "André Martins"
+    },
+    {
+      "id_professor": 8,
+      "id_escola": 1,
+      "nome": "Tatiane Ribeiro"
+    },
+    {
+      "id_professor": 9,
+      "id_escola": 2,
+      "nome": "Gustavo Almeida"
+    },
+    {
+      "id_professor": 10,
+      "id_escola": 2,
+      "nome": "Larissa Mendes"
+    }
+  ],
+  "professor_idioma": [
+    {
+      "id_professor": 1,
+      "id_aluno": null,
+      "id_idioma": 1,
+      "id_escola": 1
+    },
+    {
+      "id_professor": 1,
+      "id_aluno": null,
+      "id_idioma": 3,
+      "id_escola": 1
+    },
+    {
+      "id_professor": 2,
+      "id_aluno": null,
+      "id_idioma": 2,
+      "id_escola": 1
+    },
+    {
+      "id_professor": 3,
+      "id_aluno": null,
+      "id_idioma": 1,
+      "id_escola": 1
+    },
+    {
+      "id_professor": 3,
+      "id_aluno": null,
+      "id_idioma": 2,
+      "id_escola": 1
+    },
+    {
+      "id_professor": 4,
+      "id_aluno": null,
+      "id_idioma": 1,
+      "id_escola": 2
+    },
+    {
+      "id_professor": 5,
+      "id_aluno": null,
+      "id_idioma": 4,
+      "id_escola": 2
+    },
+    {
+      "id_professor": 6,
+      "id_aluno": null,
+      "id_idioma": 3,
+      "id_escola": 1
+    },
+    {
+      "id_professor": 6,
+      "id_aluno": null,
+      "id_idioma": 5,
+      "id_escola": 1
+    },
+    {
+      "id_professor": 7,
+      "id_aluno": null,
+      "id_idioma": 6,
+      "id_escola": 1
+    },
+    {
+      "id_professor": 8,
+      "id_aluno": null,
+      "id_idioma": 1,
+      "id_escola": 1
+    },
+    {
+      "id_professor": 9,
+      "id_aluno": null,
+      "id_idioma": 2,
+      "id_escola": 2
+    },
+    {
+      "id_professor": 10,
+      "id_aluno": null,
+      "id_idioma": 5,
+      "id_escola": 2
+    }
+  ],
+  "alunos": [
+    {
+      "id_aluno": 1,
+      "id_escola": 1,
+      "nome": "Lucas Ferreira",
+      "nascimento": "2005-07-22",
+      "endereco": "Rua das Flores, 123 - SP",
+      "pai": "Roberto Ferreira",
+      "mae": "Cláudia Ferreira",
+      "telefone_aluno": "(11) 99111-2233",
+      "telefone_responsavel": "(11) 98000-1111",
+      "email": "lucas.ferreira@email.com",
+      "data_cadastro": "2024-02-10"
+    },
+    {
+      "id_aluno": 2,
+      "id_escola": 1,
+      "nome": "Beatriz Santos",
+      "nascimento": "2006-03-14",
+      "endereco": "Av. Paulista, 456 - SP",
+      "pai": "João Santos",
+      "mae": "Marina Santos",
+      "telefone_aluno": "(11) 99222-3344",
+      "telefone_responsavel": "(11) 97000-2222",
+      "email": "beatriz.santos@email.com",
+      "data_cadastro": "2024-02-15"
+    },
+    {
+      "id_aluno": 3,
+      "id_escola": 1,
+      "nome": "Pedro Henrique Ramos",
+      "nascimento": "2004-11-05",
+      "endereco": "Rua Augusta, 789 - SP",
+      "pai": "Henrique Ramos",
+      "mae": "Sônia Ramos",
+      "telefone_aluno": "(11) 99333-4455",
+      "telefone_responsavel": "(11) 96000-3333",
+      "email": "pedro.ramos@email.com",
+      "data_cadastro": "2024-03-01"
+    },
+    {
+      "id_aluno": 4,
+      "id_escola": 1,
+      "nome": "Isabela Martins",
+      "nascimento": "2007-09-30",
+      "endereco": "Rua Oscar Freire, 321 - SP",
+      "pai": "Fábio Martins",
+      "mae": "Letícia Martins",
+      "telefone_aluno": "(11) 99444-5566",
+      "telefone_responsavel": "(11) 95000-4444",
+      "email": "isabela.martins@email.com",
+      "data_cadastro": "2024-03-20"
+    },
+    {
+      "id_aluno": 5,
+      "id_escola": 2,
+      "nome": "Gabriel Moura",
+      "nascimento": "2005-01-18",
+      "endereco": "Rua Barão de Jaguara, 55 - Campinas",
+      "pai": "Eduardo Moura",
+      "mae": "Cristina Moura",
+      "telefone_aluno": "(19) 99555-6677",
+      "telefone_responsavel": "(19) 94000-5555",
+      "email": "gabriel.moura@email.com",
+      "data_cadastro": "2024-04-05"
+    },
+    {
+      "id_aluno": 6,
+      "id_escola": 2,
+      "nome": "Sofia Pereira",
+      "nascimento": "2006-06-25",
+      "endereco": "Av. Brasil, 900 - Campinas",
+      "pai": "André Pereira",
+      "mae": "Vanessa Pereira",
+      "telefone_aluno": "(19) 99666-7788",
+      "telefone_responsavel": "(19) 93000-6666",
+      "email": "sofia.pereira@email.com",
+      "data_cadastro": "2024-04-12"
+    },
+    {
+      "id_aluno": 7,
+      "id_escola": 1,
+      "nome": "Mariana Azevedo",
+      "nascimento": "2005-12-02",
+      "endereco": "Rua Vergueiro, 1100 - SP",
+      "pai": "Carlos Azevedo",
+      "mae": "Renata Azevedo",
+      "telefone_aluno": "(11) 99777-8899",
+      "telefone_responsavel": "(11) 92000-7777",
+      "email": "mariana.azevedo@email.com",
+      "data_cadastro": "2024-04-18"
+    },
+    {
+      "id_aluno": 8,
+      "id_escola": 1,
+      "nome": "Rafael Gomes",
+      "nascimento": "2004-08-17",
+      "endereco": "Rua Haddock Lobo, 245 - SP",
+      "pai": "Maurício Gomes",
+      "mae": "Helena Gomes",
+      "telefone_aluno": "(11) 99888-9900",
+      "telefone_responsavel": "(11) 91000-8888",
+      "email": "rafael.gomes@email.com",
+      "data_cadastro": "2024-04-22"
+    },
+    {
+      "id_aluno": 9,
+      "id_escola": 2,
+      "nome": "Laura Teixeira",
+      "nascimento": "2007-04-09",
+      "endereco": "Rua Conceição, 310 - Campinas",
+      "pai": "Sérgio Teixeira",
+      "mae": "Daniela Teixeira",
+      "telefone_aluno": "(19) 99777-1122",
+      "telefone_responsavel": "(19) 92000-9999",
+      "email": "laura.teixeira@email.com",
+      "data_cadastro": "2024-05-02"
+    },
+    {
+      "id_aluno": 10,
+      "id_escola": 2,
+      "nome": "Matheus Cardoso",
+      "nascimento": "2006-10-21",
+      "endereco": "Av. Anchieta, 700 - Campinas",
+      "pai": "Paulo Cardoso",
+      "mae": "Simone Cardoso",
+      "telefone_aluno": "(19) 99888-3344",
+      "telefone_responsavel": "(19) 91000-1212",
+      "email": "matheus.cardoso@email.com",
+      "data_cadastro": "2024-05-06"
+    }
+  ],
+  "turmas": [
+    {
+      "id_turma": 1,
+      "id_escola": 1,
+      "id_idioma": 1,
+      "id_nivel": 1,
+      "id_professor": 1,
+      "status": "ativa",
+      "nome_turma": "Inglês Básico - Manhã",
+      "dia_semana": "Segunda e Quarta",
+      "hora_inicio": "08:00",
+      "hora_fim": "09:30",
+      "data_inicio": "2024-03-04",
+      "data_fim": "2024-08-30",
+      "capacidade": 8,
+      "observacao": null
+    },
+    {
+      "id_turma": 2,
+      "id_escola": 1,
+      "id_idioma": 1,
+      "id_nivel": 2,
+      "id_professor": 3,
+      "status": "ativa",
+      "nome_turma": "Inglês Intermediário - Tarde",
+      "dia_semana": "Terça e Quinta",
+      "hora_inicio": "14:00",
+      "hora_fim": "15:30",
+      "data_inicio": "2024-03-05",
+      "data_fim": "2024-08-31",
+      "capacidade": 8,
+      "observacao": null
+    },
+    {
+      "id_turma": 3,
+      "id_escola": 1,
+      "id_idioma": 2,
+      "id_nivel": 4,
+      "id_professor": 2,
+      "status": "ativa",
+      "nome_turma": "Espanhol Básico - Noite",
+      "dia_semana": "Sexta",
+      "hora_inicio": "19:00",
+      "hora_fim": "21:00",
+      "data_inicio": "2024-03-08",
+      "data_fim": "2024-09-06",
+      "capacidade": 10,
+      "observacao": "Turma presencial"
+    },
+    {
+      "id_turma": 4,
+      "id_escola": 2,
+      "id_idioma": 1,
+      "id_nivel": 7,
+      "id_professor": 4,
+      "status": "ativa",
+      "nome_turma": "Inglês Básico - Tarde",
+      "dia_semana": "Segunda e Quarta",
+      "hora_inicio": "15:00",
+      "hora_fim": "16:30",
+      "data_inicio": "2024-04-08",
+      "data_fim": "2024-10-02",
+      "capacidade": 6,
+      "observacao": null
+    },
+    {
+      "id_turma": 5,
+      "id_escola": 1,
+      "id_idioma": 1,
+      "id_nivel": 3,
+      "id_professor": 1,
+      "status": "encerrada",
+      "nome_turma": "Inglês Avançado - Sábado",
+      "dia_semana": "Sábado",
+      "hora_inicio": "09:00",
+      "hora_fim": "11:00",
+      "data_inicio": "2023-08-05",
+      "data_fim": "2024-01-27",
+      "capacidade": 6,
+      "observacao": "Turma encerrada no semestre anterior"
+    },
+    {
+      "id_turma": 6,
+      "id_escola": 1,
+      "id_idioma": 3,
+      "id_nivel": 6,
+      "id_professor": 6,
+      "status": "ativa",
+      "nome_turma": "Francês Básico - Tarde",
+      "dia_semana": "Segunda",
+      "hora_inicio": "16:00",
+      "hora_fim": "18:00",
+      "data_inicio": "2024-04-15",
+      "data_fim": "2024-10-14",
+      "capacidade": 8,
+      "observacao": null
+    },
+    {
+      "id_turma": 7,
+      "id_escola": 1,
+      "id_idioma": 5,
+      "id_nivel": 11,
+      "id_professor": 6,
+      "status": "ativa",
+      "nome_turma": "Italiano Básico - Noite",
+      "dia_semana": "Quarta",
+      "hora_inicio": "19:00",
+      "hora_fim": "21:00",
+      "data_inicio": "2024-04-17",
+      "data_fim": "2024-10-16",
+      "capacidade": 10,
+      "observacao": "Turma online"
+    },
+    {
+      "id_turma": 8,
+      "id_escola": 1,
+      "id_idioma": 6,
+      "id_nivel": 12,
+      "id_professor": 7,
+      "status": "ativa",
+      "nome_turma": "Japonês Básico - Sábado",
+      "dia_semana": "Sábado",
+      "hora_inicio": "10:00",
+      "hora_fim": "12:00",
+      "data_inicio": "2024-04-20",
+      "data_fim": "2024-10-19",
+      "capacidade": 6,
+      "observacao": null
+    },
+    {
+      "id_turma": 9,
+      "id_escola": 2,
+      "id_idioma": 2,
+      "id_nivel": 13,
+      "id_professor": 9,
+      "status": "ativa",
+      "nome_turma": "Espanhol Básico - Manhã",
+      "dia_semana": "Terça e Quinta",
+      "hora_inicio": "09:00",
+      "hora_fim": "10:30",
+      "data_inicio": "2024-05-07",
+      "data_fim": "2024-11-07",
+      "capacidade": 8,
+      "observacao": null
+    },
+    {
+      "id_turma": 10,
+      "id_escola": 2,
+      "id_idioma": 5,
+      "id_nivel": 15,
+      "id_professor": 10,
+      "status": "ativa",
+      "nome_turma": "Italiano Básico - Tarde",
+      "dia_semana": "Sexta",
+      "hora_inicio": "14:00",
+      "hora_fim": "16:00",
+      "data_inicio": "2024-05-10",
+      "data_fim": "2024-11-08",
+      "capacidade": 8,
+      "observacao": null
+    }
+  ],
+  "matriculas": [
+    {
+      "id_matricula": 1,
+      "id_aluno": 1,
+      "id_turma": 1,
+      "status_aluno": "ativo",
+      "data_inicio": "2024-03-04",
+      "data_matricula": "2024-02-20"
+    },
+    {
+      "id_matricula": 2,
+      "id_aluno": 2,
+      "id_turma": 1,
+      "status_aluno": "ativo",
+      "data_inicio": "2024-03-04",
+      "data_matricula": "2024-02-22"
+    },
+    {
+      "id_matricula": 3,
+      "id_aluno": 3,
+      "id_turma": 2,
+      "status_aluno": "ativo",
+      "data_inicio": "2024-03-05",
+      "data_matricula": "2024-02-28"
+    },
+    {
+      "id_matricula": 4,
+      "id_aluno": 4,
+      "id_turma": 3,
+      "status_aluno": "ativo",
+      "data_inicio": "2024-03-08",
+      "data_matricula": "2024-03-01"
+    },
+    {
+      "id_matricula": 5,
+      "id_aluno": 1,
+      "id_turma": 5,
+      "status_aluno": "concluído",
+      "data_inicio": "2023-08-05",
+      "data_matricula": "2023-07-28"
+    },
+    {
+      "id_matricula": 6,
+      "id_aluno": 5,
+      "id_turma": 4,
+      "status_aluno": "ativo",
+      "data_inicio": "2024-04-08",
+      "data_matricula": "2024-04-01"
+    },
+    {
+      "id_matricula": 7,
+      "id_aluno": 6,
+      "id_turma": 4,
+      "status_aluno": "cancelado",
+      "data_inicio": "2024-04-08",
+      "data_matricula": "2024-04-03"
+    },
+    {
+      "id_matricula": 8,
+      "id_aluno": 7,
+      "id_turma": 6,
+      "status_aluno": "ativo",
+      "data_inicio": "2024-04-15",
+      "data_matricula": "2024-04-10"
+    },
+    {
+      "id_matricula": 9,
+      "id_aluno": 8,
+      "id_turma": 7,
+      "status_aluno": "ativo",
+      "data_inicio": "2024-04-17",
+      "data_matricula": "2024-04-12"
+    },
+    {
+      "id_matricula": 10,
+      "id_aluno": 9,
+      "id_turma": 9,
+      "status_aluno": "ativo",
+      "data_inicio": "2024-05-07",
+      "data_matricula": "2024-05-01"
+    },
+    {
+      "id_matricula": 11,
+      "id_aluno": 10,
+      "id_turma": 10,
+      "status_aluno": "ativo",
+      "data_inicio": "2024-05-10",
+      "data_matricula": "2024-05-04"
+    }
+  ],
+  "pagamentos": [
+    {
+      "id_pagamento": 1,
+      "id_matricula": 1,
+      "valor": 350.0,
+      "data_vencimento": "2024-03-10",
+      "data_pagamento": "2024-03-09",
+      "status": "pago"
+    },
+    {
+      "id_pagamento": 2,
+      "id_matricula": 1,
+      "valor": 350.0,
+      "data_vencimento": "2024-04-10",
+      "data_pagamento": "2024-04-11",
+      "status": "pago"
+    },
+    {
+      "id_pagamento": 3,
+      "id_matricula": 1,
+      "valor": 350.0,
+      "data_vencimento": "2024-05-10",
+      "data_pagamento": null,
+      "status": "pendente"
+    },
+    {
+      "id_pagamento": 4,
+      "id_matricula": 2,
+      "valor": 350.0,
+      "data_vencimento": "2024-03-10",
+      "data_pagamento": "2024-03-10",
+      "status": "pago"
+    },
+    {
+      "id_pagamento": 5,
+      "id_matricula": 2,
+      "valor": 350.0,
+      "data_vencimento": "2024-04-10",
+      "data_pagamento": null,
+      "status": "atrasado"
+    },
+    {
+      "id_pagamento": 6,
+      "id_matricula": 3,
+      "valor": 380.0,
+      "data_vencimento": "2024-03-10",
+      "data_pagamento": "2024-03-08",
+      "status": "pago"
+    },
+    {
+      "id_pagamento": 7,
+      "id_matricula": 4,
+      "valor": 380.0,
+      "data_vencimento": "2024-03-10",
+      "data_pagamento": "2024-03-08",
+      "status": "pago"
+    },
+    {
+      "id_pagamento": 8,
+      "id_matricula": 6,
+      "valor": 300.0,
+      "data_vencimento": "2024-04-15",
+      "data_pagamento": "2024-04-14",
+      "status": "pago"
+    },
+    {
+      "id_pagamento": 9,
+      "id_matricula": 8,
+      "valor": 360.0,
+      "data_vencimento": "2024-05-15",
+      "data_pagamento": "2024-05-14",
+      "status": "pago"
+    },
+    {
+      "id_pagamento": 10,
+      "id_matricula": 9,
+      "valor": 340.0,
+      "data_vencimento": "2024-05-17",
+      "data_pagamento": null,
+      "status": "pendente"
+    },
+    {
+      "id_pagamento": 11,
+      "id_matricula": 10,
+      "valor": 350.0,
+      "data_vencimento": "2024-06-07",
+      "data_pagamento": null,
+      "status": "pendente"
+    },
+    {
+      "id_pagamento": 12,
+      "id_matricula": 11,
+      "valor": 340.0,
+      "data_vencimento": "2024-06-10",
+      "data_pagamento": "2024-06-09",
+      "status": "pago"
+    }
+  ],
+  "aulas": [
+    {
+      "id_aula": 1,
+      "id_turma": 1,
+      "status": "realizada",
+      "data_aula": "2024-03-04",
+      "observacao": null
+    },
+    {
+      "id_aula": 2,
+      "id_turma": 1,
+      "status": "realizada",
+      "data_aula": "2024-03-06",
+      "observacao": null
+    },
+    {
+      "id_aula": 3,
+      "id_turma": 1,
+      "status": "realizada",
+      "data_aula": "2024-03-11",
+      "observacao": "Revisão de vocabulário"
+    },
+    {
+      "id_aula": 4,
+      "id_turma": 1,
+      "status": "cancelada",
+      "data_aula": "2024-03-13",
+      "observacao": "Feriado municipal"
+    },
+    {
+      "id_aula": 5,
+      "id_turma": 2,
+      "status": "realizada",
+      "data_aula": "2024-03-05",
+      "observacao": null
+    },
+    {
+      "id_aula": 6,
+      "id_turma": 2,
+      "status": "realizada",
+      "data_aula": "2024-03-07",
+      "observacao": null
+    },
+    {
+      "id_aula": 7,
+      "id_turma": 3,
+      "status": "realizada",
+      "data_aula": "2024-03-08",
+      "observacao": null
+    },
+    {
+      "id_aula": 8,
+      "id_turma": 4,
+      "status": "realizada",
+      "data_aula": "2024-04-08",
+      "observacao": null
+    },
+    {
+      "id_aula": 9,
+      "id_turma": 6,
+      "status": "realizada",
+      "data_aula": "2024-04-15",
+      "observacao": null
+    },
+    {
+      "id_aula": 10,
+      "id_turma": 7,
+      "status": "realizada",
+      "data_aula": "2024-04-17",
+      "observacao": null
+    },
+    {
+      "id_aula": 11,
+      "id_turma": 8,
+      "status": "realizada",
+      "data_aula": "2024-04-20",
+      "observacao": "Introdução ao alfabeto japonês"
+    },
+    {
+      "id_aula": 12,
+      "id_turma": 9,
+      "status": "realizada",
+      "data_aula": "2024-05-07",
+      "observacao": null
+    }
+  ],
+  "presenca": [
+    {
+      "id_presenca": 1,
+      "id_aula": 1,
+      "id_aluno": 1,
+      "presente": "sim"
+    },
+    {
+      "id_presenca": 2,
+      "id_aula": 1,
+      "id_aluno": 2,
+      "presente": "sim"
+    },
+    {
+      "id_presenca": 3,
+      "id_aula": 2,
+      "id_aluno": 1,
+      "presente": "sim"
+    },
+    {
+      "id_presenca": 4,
+      "id_aula": 2,
+      "id_aluno": 2,
+      "presente": "não"
+    },
+    {
+      "id_presenca": 5,
+      "id_aula": 3,
+      "id_aluno": 1,
+      "presente": "sim"
+    },
+    {
+      "id_presenca": 6,
+      "id_aula": 3,
+      "id_aluno": 2,
+      "presente": "sim"
+    },
+    {
+      "id_presenca": 7,
+      "id_aula": 5,
+      "id_aluno": 3,
+      "presente": "sim"
+    },
+    {
+      "id_presenca": 8,
+      "id_aula": 6,
+      "id_aluno": 3,
+      "presente": "não"
+    },
+    {
+      "id_presenca": 9,
+      "id_aula": 7,
+      "id_aluno": 4,
+      "presente": "sim"
+    },
+    {
+      "id_presenca": 10,
+      "id_aula": 8,
+      "id_aluno": 5,
+      "presente": "sim"
+    },
+    {
+      "id_presenca": 11,
+      "id_aula": 9,
+      "id_aluno": 7,
+      "presente": "sim"
+    },
+    {
+      "id_presenca": 12,
+      "id_aula": 10,
+      "id_aluno": 8,
+      "presente": "sim"
+    },
+    {
+      "id_presenca": 13,
+      "id_aula": 11,
+      "id_aluno": 7,
+      "presente": "não"
+    },
+    {
+      "id_presenca": 14,
+      "id_aula": 12,
+      "id_aluno": 9,
+      "presente": "sim"
+    },
+    {
+      "id_presenca": 15,
+      "id_aula": 12,
+      "id_aluno": 10,
+      "presente": "não"
+    }
+  ]
+}
