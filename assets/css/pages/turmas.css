@@ -1,0 +1,279 @@
+/* --------------- ESTILIZANDO TELA BASE --------------- */
+.pagina{
+    display: flex;
+    overflow: hidden;
+    margin-left: 13%;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    width: 87%;
+    padding: 70px;
+    gap: 40px;
+}
+
+.introPage{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.textIntroPage{
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    gap: 5px;
+    color: var(--azul-principal);
+    padding-left: 20px;
+}
+
+.textIntroPage h1{
+    font-size: 35px
+}
+
+.textIntroPage p{
+    font-size: 16px;
+}
+
+.btn-tamanho{
+    width: 250px;
+    height: 35px;
+}
+
+.btn-laranja:hover {
+    background-color: var(--azul-secundario);
+    border: 2px solid var(--azul-secundario);
+}
+/* --------------- FIM ESTILIZANDO TELA BASE --------------- */
+
+.cardsTurmas{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    width: 100%;
+    height: 100%;
+}
+
+.cardTurma{
+    display: flex;
+    flex-direction: column;
+    width: 480px;
+    height: 280px;
+    padding: 40px;
+    border: 2px solid var(--cinza);
+    border-radius: 50px;
+    gap: 10px;
+    transition: width 0.5s ease, background-color 0.5s ease;
+}
+
+.cardTurma:hover{
+    background-color: var(--escuro);
+    scale: 0.98;
+    cursor: pointer;
+    border: var(--escuro);
+}
+
+.cardTurma:hover .infoTurma{
+    color: var(--branco);
+}
+
+.cardTurma:hover .idiomaTurma{
+    color: var(--laranja);
+}
+
+.cardTurma:hover .date{
+    color: var(--branco);
+}
+
+.infoTurma{
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    margin-left: 35px;
+    font-size: 14px;
+    gap: 5px;
+    color: var(--cinza);
+}
+
+.idiomaTurma{
+    font-weight: bold;
+    font-size: 25px;
+    color: var(--azul-principal);
+}
+
+.linhaInfo{
+    display: flex;
+    color: var(--cinza);
+    justify-content: start;
+    gap: 10px;
+
+}
+
+.linhaInfo img{
+    width: 24px;
+}
+
+.nivel{
+    font-weight: bold;
+    color: var(--laranja);
+}
+
+.date{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    line-height: 1;
+    font-size: 14px;
+    color: var(--azul-principal);
+}
+
+.date h3{
+    font-size: 18px;
+}
+
+.date hr{
+    border: 0;
+    height: 2px;
+    background-color:var(--cinza); 
+    margin-bottom: 10px;
+}
+
+/* ---------------- Status da turma ---------------- */
+
+.topoTurma {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.statusTurma {
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.status-ativa {
+    background: #eafaf1;
+    color: #1e8449;
+}
+
+.status-encerrada {
+    background: #f1f1f1;
+    color: #666;
+}
+
+.status-cancelada,
+.status-inativa {
+    background: #fde8e8;
+    color: #c0392b;
+}
+
+/* ---------------- Modal detalhes da turma ---------------- */
+
+.modal-detalhe-turma {
+    max-width: 760px;
+}
+
+.detalhe-turma-resumo {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.detalhe-turma-topo {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.detalhe-turma-topo h3 {
+    margin: 0;
+}
+
+.detalhe-turma-topo p {
+    margin-top: 4px;
+    opacity: 0.75;
+}
+
+.detalhe-turma-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.detalhe-turma-grid div,
+.detalhe-observacao {
+    background: #f7f7f7;
+    border-radius: 12px;
+    padding: 12px;
+}
+
+.detalhe-turma-grid strong,
+.detalhe-observacao strong {
+    display: block;
+    font-size: 0.78rem;
+    opacity: 0.7;
+    margin-bottom: 4px;
+}
+
+.detalhe-turma-grid p,
+.detalhe-observacao p {
+    margin: 0;
+    font-weight: 700;
+}
+
+.detalhe-alunos {
+    margin-top: 24px;
+}
+
+.detalhe-alunos-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.detalhe-alunos-header h3 {
+    margin: 0;
+}
+
+.detalhe-alunos-header span {
+    font-size: 0.85rem;
+    font-weight: 700;
+    opacity: 0.7;
+}
+
+.lista-alunos-turma {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.item-aluno-turma {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid var(--azul-principal);
+    border-radius: 12px;
+    padding: 12px;
+    color: var(--azul-principal);
+}
+
+.item-aluno-turma p {
+    margin: 4px 0 0;
+    font-size: 0.85rem;
+    opacity: 0.7;
+    
+}
+
+.btn-ver-aluno {
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--azul);
+}

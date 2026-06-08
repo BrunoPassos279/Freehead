@@ -1,128 +1,209 @@
-
- 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/41727f8d-5bfb-4384-8904-ee698f44c573" width="247" alt="Logo branca detail">
- 
-## Sistema de Gestão Escolar
+  <img src="https://github.com/user-attachments/assets/41727f8d-5bfb-4384-8904-ee698f44c573" width="247" alt="Freehead Logo">
+
+## Sistema de Gestão para Escolas de Idiomas
+
 </div>
 
-<img width="3000" height="100" alt="212284100-561aa473-3905-4a80-b561-0d28506553ee" src="https://github.com/user-attachments/assets/ffa16b7c-9c8a-4fdc-b997-32bec19aec37" />
+<img width="3000" height="100" alt="divisor" src="https://github.com/user-attachments/assets/ffa16b7c-9c8a-4fdc-b997-32bec19aec37" />
 
+<img width="1910" height="817" alt="Preview do sistema" src="https://github.com/user-attachments/assets/619f13ad-3b52-4ada-9d82-f50116c20281" />
 
-<img width="1910" height="817" alt="image" src="https://github.com/user-attachments/assets/619f13ad-3b52-4ada-9d82-f50116c20281" />
-
-
+<img width="3000" height="100" alt="divisor" src="https://github.com/user-attachments/assets/ffa16b7c-9c8a-4fdc-b997-32bec19aec37" />
 
 <div align="center">
- 
+
 ## Sobre o Projeto
-<img width="3000" height="100" alt="212284100-561aa473-3905-4a80-b561-0d28506553ee" src="https://github.com/user-attachments/assets/ffa16b7c-9c8a-4fdc-b997-32bec19aec37" />
+
 </div>
 
+O **Freehead** é um sistema web de gestão escolar desenvolvido em PHP, voltado para **escolas de idiomas**. O objetivo é centralizar todas as informações administrativas da escola em um único lugar: alunos, professores, turmas, matrículas e financeiro.
 
-O **Freehead** é um sistema web de gestão escolar desenvolvido em PHP, com o objetivo de auxiliar gestores no controle e organização das atividades administrativas de uma instituição de ensino.
-
-A plataforma foi projetada para centralizar informações essenciais, permitindo o gerenciamento de alunos, turmas e pagamentos de forma simples, eficiente e escalável.
+O sistema foi construído com uma arquitetura preparada para migração futura de banco de dados — hoje utiliza arquivos JSON como banco temporário, com a lógica encapsulada em **repositories** para que a troca por MySQL/PDO não exija reescrita das páginas.
 
 ---
 
 <div align="center">
 
-## Objetivo
-<img width="3000" height="100" alt="212284100-561aa473-3905-4a80-b561-0d28506553ee" src="https://github.com/user-attachments/assets/ffa16b7c-9c8a-4fdc-b997-32bec19aec37" />
+## Funcionalidades
+
 </div>
 
+<img width="3000" height="100" alt="divisor" src="https://github.com/user-attachments/assets/ffa16b7c-9c8a-4fdc-b997-32bec19aec37" />
 
-O principal objetivo do Freehead é oferecer uma solução prática para:
+### Autenticação
+- Cadastro de escola com seleção de idiomas oferecidos
+- Login e logout de gestores
+- Controle de sessão com validação em todas as páginas
 
-* Cadastro e gerenciamento de alunos
-* Organização de turmas
-* Controle financeiro básico (mensalidades e pagamentos)
-* Centralização das informações escolares em um único sistema
+### Gestão de Alunos
+- Cadastro completo (dados pessoais, responsáveis, contatos)
+- Visualização detalhada por aluno (`pageAluno.php`)
+- Edição de informações via modal
+- Exclusão com confirmação
+- Transferência de turma
+- Busca inteligente com sugestões em tempo real na sidebar
 
----
+### Gestão de Professores
+- Cadastro de professores com seleção de idiomas que leciona
+- Visualização por cards com contagem de turmas ativas
+- Edição e exclusão via modal
+- Associação a turmas
 
-##  Funcionalidades
-<img width="3000" height="100" alt="212284100-561aa473-3905-4a80-b561-0d28506553ee" src="https://github.com/user-attachments/assets/ffa16b7c-9c8a-4fdc-b997-32bec19aec37" />
-
-
-###  Gestão de Usuários
-
-* Cadastro e autenticação de gestores
-* Controle de acesso ao sistema
-
-###  Gestão de Alunos
-
-* Cadastro de alunos
-* Edição de informações
-* Controle de status (ativo/inativo)
-
-###  Gestão de Turmas
-
-* Criação de turmas
-* Associação de alunos às turmas
-* Visualização de participantes
+### Gestão de Turmas
+- Criação de turmas com idioma, nível, professor, horário e capacidade
+- Visualização por cards com status (ativa, encerrada, cancelada)
+- Modal de detalhes com lista de alunos matriculados
+- Inclusão de alunos diretamente pela turma
 
 ### Controle Financeiro
+- Dashboard financeiro com receita do mês, a receber e em atraso
+- Registro de pagamentos associados a alunos/matrículas
+- Histórico de pagamentos com filtro por escola
+- Visualização de pendências financeiras
 
-* Registro de mensalidades
-* Controle de pagamentos
-* Histórico financeiro por aluno
+### Configurações da Escola
+- Edição de dados da escola (nome, gestor, contato)
+- Gerenciamento de idiomas oferecidos
+- Troca de senha
+
+---
+
+<div align="center">
+
+## Estrutura do Projeto
+
+</div>
+
+<img width="3000" height="100" alt="divisor" src="https://github.com/user-attachments/assets/ffa16b7c-9c8a-4fdc-b997-32bec19aec37" />
+
+```
+Freehead/
+│
+├── actions/                    → Arquivos PHP que recebem requisições (salvar, editar, excluir...)
+│   ├── salvarAluno.act.php
+│   ├── editarAluno.act.php
+│   ├── excluirAluno.act.php
+│   ├── salvarProfessor.act.php
+│   ├── salvarTurma.act.php
+│   ├── registrarPagamento.act.php
+│   ├── login.act.php
+│   ├── logout.act.php
+│   └── ...
+│
+├── assets/
+│   ├── css/
+│   │   ├── root.css            → Variáveis de cor, tipografia e tokens do design system
+│   │   ├── global.css          → Reset, estilos base, sidebar e componentes reutilizáveis
+│   │   ├── modal.css           → Estilos unificados de todos os modais
+│   │   └── pages/              → CSS específico de cada página
+│   ├── js/
+│   │   ├── sidebar.js          → Marca item ativo e busca inteligente de alunos
+│   │   ├── modalAluno.js       → Lógica do modal de alunos
+│   │   ├── modalProfessor.js   → Lógica do modal de professores
+│   │   ├── modalTurma.js       → Lógica do modal de turmas
+│   │   ├── modalPagamento.js   → Lógica do modal de pagamentos
+│   │   └── ...
+│   └── img/                    → Ícones, imagens e logos do sistema
+│
+├── config/
+│   └── database.php            → Configuração de conexão com banco de dados
+│
+├── includes/                   → Componentes PHP reutilizáveis
+│   ├── sidebar.inc.php
+│   ├── btn.inc.php
+│   ├── input.inc.php
+│   ├── auth.inc.php            → Funções de sessão e autenticação
+│   ├── modalAluno.inc.php
+│   ├── modalProf.inc.php
+│   ├── modalTurma.inc.php
+│   └── modalPagamento.inc.php
+│
+├── pages/                      → Páginas do sistema
+│   ├── index.php               → Login
+│   ├── cadastroEscola.php      → Cadastro de nova escola
+│   ├── dashboard.php           → Painel principal
+│   ├── alunos.php              → Lista de alunos
+│   ├── pageAluno.php           → Detalhes do aluno
+│   ├── professores.php         → Lista de professores
+│   ├── turmas.php              → Lista de turmas
+│   └── financeiro.php          → Controle financeiro
+│
+└── repositories/               → Camada de acesso a dados (preparada para MySQL)
+    ├── AlunoRepository.php
+    ├── ProfessorRepository.php
+    ├── TurmaRepository.php
+    ├── PagamentoRepository.php
+    ├── AuthRepository.php
+    ├── EscolaRepository.php
+    ├── DashboardRepository.php
+    └── ConfiguracoesEscolaRepository.php
+```
 
 ---
 
-## Estrutura do Sistema
-
-O projeto segue uma organização modular para facilitar manutenção e escalabilidade:
-
-```
-/config        → Configurações gerais (ex: conexão com banco)
-/models        → Regras de negócio e acesso a dados
-/controllers   → Controle das requisições
-/views         → Interface do usuário
-/functions     → Funções auxiliares
-```
-
----
+<div align="center">
 
 ## Banco de Dados
 
-O sistema é estruturado com base nas seguintes entidades principais:
+</div>
 
-* **usuarios** → responsáveis pelo acesso ao sistema
-* **alunos** → dados dos estudantes
-* **turmas** → organização das classes
-* **turma_alunos** → relação entre alunos e turmas
-* **pagamentos** → controle financeiro
+<img width="3000" height="100" alt="divisor" src="https://github.com/user-attachments/assets/ffa16b7c-9c8a-4fdc-b997-32bec19aec37" />
 
----
+O sistema foi modelado com as seguintes tabelas:
 
-## Segurança
+| Tabela | Descrição |
+|---|---|
+| `escolas` | Dados das escolas cadastradas no sistema |
+| `idiomas` | Idiomas disponíveis na plataforma |
+| `idiomas_escolas` | Relação entre escolas e os idiomas que oferecem |
+| `niveis` | Níveis de cada idioma por escola (básico, intermediário, avançado...) |
+| `professores` | Professores vinculados a uma escola |
+| `professor_idioma` | Idiomas que cada professor leciona |
+| `alunos` | Dados completos dos alunos |
+| `turmas` | Turmas com idioma, nível, professor e horário |
+| `matriculas` | Vínculo entre aluno e turma com status |
+| `pagamentos` | Registro de mensalidades e pagamentos |
+| `aulas` | Aulas realizadas ou canceladas por turma |
+| `presenca` | Presença dos alunos por aula |
 
-Boas práticas básicas de segurança são aplicadas:
-
-* Criptografia de senhas com `password_hash()`
-* Uso de **Prepared Statements (PDO)** para evitar SQL Injection
-* Validação de dados de entrada
-
----
-
-## Escopo Inicial (MVP)
-
-A primeira versão do sistema contempla:
-
-1. Autenticação de usuário
-2. Cadastro de alunos
-3. Criação de turmas
-4. Vinculação de alunos às turmas
-
-Funcionalidades adicionais, como relatórios e dashboards, poderão ser implementadas em versões futuras.
+> **Banco atual:** JSON temporário (`dados.json`), lido via repositories PHP.
+> **Migração:** Altere apenas os repositories para usar `PDO` — as páginas e actions não precisam de nenhuma mudança.
 
 ---
+
 <div align="center">
 
-## Linguagens/Tecnologias Utilizadas
+## Arquitetura e Padrões
+
 </div>
+
+<img width="3000" height="100" alt="divisor" src="https://github.com/user-attachments/assets/ffa16b7c-9c8a-4fdc-b997-32bec19aec37" />
+
+**Separação de responsabilidades**
+Cada camada tem uma função clara: pages exibem, actions processam, repositories acessam dados. Nenhuma página faz consulta direta ao banco.
+
+**Componentes reutilizáveis**
+Botões (`btn.inc.php`), inputs (`input.inc.php`) e a sidebar (`sidebar.inc.php`) são incluídos via PHP em todas as páginas. Mudar um componente reflete em todo o sistema.
+
+**Sistema de modais unificado**
+Todos os modais (aluno, professor, turma, pagamento) compartilham um único `modal.css` e seguem o mesmo padrão de três estados: *novo*, *visualizar* e *editar*. Os dados chegam ao modal via atributos `data-*` do PHP, sem requisições extras ao servidor.
+
+**Design system**
+Cores, tipografia e espaçamentos centralizados em `root.css` com variáveis CSS. A paleta usa azul escuro como cor principal, laranja como destaque e branco off-white para fundos.
+
+**Preparado para MySQL**
+A camada de repositories encapsula toda a lógica de acesso a dados. Hoje lê JSON; amanhã lê MySQL — sem tocar nas páginas ou actions.
+
+---
+
+<div align="center">
+
+## Tecnologias Utilizadas
+
+</div>
+
+<img width="3000" height="100" alt="divisor" src="https://github.com/user-attachments/assets/ffa16b7c-9c8a-4fdc-b997-32bec19aec37" />
 
 <div align="center">
   <table border="0" width="100%">
@@ -133,7 +214,7 @@ Funcionalidades adicionais, como relatórios e dashboards, poderão ser implemen
       <td width="80%" valign="middle">
         <table border="0" width="100%">
           <tr align="center">
-            <td><code>PHP</code></td>
+            <td><code>PHP 8</code></td>
             <td><code>MySQL</code></td>
             <td><code>HTML5</code></td>
             <td><code>CSS3</code></td>
@@ -147,10 +228,66 @@ Funcionalidades adicionais, como relatórios e dashboards, poderão ser implemen
 
 ---
 
-## Considerações Finais
+<div align="center">
 
-O Freehead é um projeto em evolução, com foco em organização, clareza estrutural e possibilidade de crescimento. A proposta é construir uma base sólida que permita futuras melhorias sem comprometer a manutenção do sistema.
+## Segurança
+
+</div>
+
+<img width="3000" height="100" alt="divisor" src="https://github.com/user-attachments/assets/ffa16b7c-9c8a-4fdc-b997-32bec19aec37" />
+
+- Senhas criptografadas com `password_hash()` e verificadas com `password_verify()`
+- Prepared Statements via PDO para prevenção de SQL Injection
+- Validação de sessão em todas as páginas protegidas via `validarSessao()`
+- Sanitização de dados com `htmlspecialchars()` na exibição
+- Isolamento por escola: cada gestor acessa apenas os dados da sua própria escola
 
 ---
 
-        
+<div align="center">
+
+## Como Rodar Localmente
+
+</div>
+
+<img width="3000" height="100" alt="divisor" src="https://github.com/user-attachments/assets/ffa16b7c-9c8a-4fdc-b997-32bec19aec37" />
+
+**Pré-requisitos:** PHP 8+, servidor local (XAMPP, Laragon, WAMP ou similar)
+
+```bash
+# 1. Clone o repositório
+git clone https://github.com/seu-usuario/freehead.git
+
+# 2. Coloque a pasta dentro do diretório público do seu servidor
+#    Ex: C:/xampp/htdocs/freehead
+
+# 3. Acesse no navegador
+http://localhost/freehead/pages/index.php
+```
+
+> O sistema já vem com um `dados.json` de exemplo. Nenhuma configuração de banco é necessária para rodar localmente.
+
+---
+
+<div align="center">
+
+## Próximos Passos
+
+</div>
+
+<img width="3000" height="100" alt="divisor" src="https://github.com/user-attachments/assets/ffa16b7c-9c8a-4fdc-b997-32bec19aec37" />
+
+- [ ] Migração do banco de dados de JSON para MySQL via PDO
+- [ ] Relatórios de frequência e desempenho por turma
+- [ ] Controle de presença nas aulas
+- [ ] Envio de notificações de pagamento por e-mail
+- [ ] Perfil de acesso por nível (gestor, secretaria, professor)
+- [ ] Versão responsiva completa para mobile
+
+---
+
+<div align="center">
+
+Desenvolvido com 💙 por Bruno Passos, Bruno Rodrigues, Murilo e Isaac.
+
+</div>

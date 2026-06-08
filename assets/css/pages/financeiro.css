@@ -1,0 +1,167 @@
+/* --------------- ESTILIZANDO TELA BASE --------------- */
+.pagina{
+    display: flex;
+    overflow: hidden;
+    margin-left: 13%;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    width: 87%;
+    padding: 60px;
+    gap: 40px;
+}
+
+.introPage{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.textIntroPage{
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    gap: 5px;
+    color: var(--azul-principal);
+}
+
+.textIntroPage h1{
+    font-size: 35px
+}
+
+.textIntroPage p{
+    font-size: 16px;
+}
+/* --------------- FIM ESTILIZANDO TELA BASE --------------- */
+
+.cardsFinanceiro{
+    display: flex;
+    gap: 30px;
+}
+
+.cardFinanca{
+    width: 450px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 50px;
+    padding: 40px;
+    gap: 5px;
+    background-color: var(--escuro);
+}
+
+#branco{
+    background-color: transparent;
+    border: 2px solid var(--escuro);
+}
+
+#branco p{
+    color: var(--azul-principal);
+}
+
+#branco span{
+    color: var(--azul-principal);
+}
+
+.cardFinanca p{
+    color: var(--cinza);
+}
+
+.cardFinanca h2{
+    font-size: 48px;
+    color: var(--laranja);
+    line-height: 1;
+}
+
+.cardFinanca span{
+    color: var(--branco);
+}
+
+.cardFinanca:hover{
+    scale: 1.02;
+    cursor: pointer;
+}
+
+.btn-tamanho{
+    width: 300px;
+    height: 40px;
+}
+
+.pagArea{
+    width: 1350px;
+    height: 100px;
+
+    border: 1px solid green;
+}
+
+
+.tabela-customizada {
+    width: 100%;
+    border-collapse: collapse; /* Une as bordas em uma linha única */
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+.tabela-customizada th, 
+.tabela-customizada td {
+    padding: 12px 15px; /* Espaçamento interno das células */
+    text-align: center;   /* Alinhamento do texto */
+    border-bottom: 1px solid var(--cinza); /* Linha sutil divisória */
+}
+
+.tabela-customizada th {
+    background-color: var(--escuro); 
+    color: var(--branco);
+    font-weight: bold;
+}
+
+/* Efeito zebrado: pinta as linhas pares com uma cor cinza claro */
+.tabela-customizada tbody tr:nth-of-type(even) {
+    background-color: #e6e6e6;
+}
+
+/* Efeito ao passar o mouse por cima da linha */
+.tabela-customizada tbody tr:hover {
+    cursor: pointer;
+    background-color: var(--laranja);
+    color: var(--branco);
+}
+
+.card-financeiro-clicavel {
+    cursor: pointer;
+}
+
+.card-financeiro-clicavel:hover {
+    transform: translateY(-2px);
+}
+
+.item-pendencia-financeira {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    gap: 14px;
+    padding: 14px;
+    border: 2px solid var(--azul-principal);
+    border-radius: 12px;
+    margin-bottom: 10px;
+    color: var(--azul-principal);
+}
+
+.item-pendencia-financeira p {
+    margin: 4px 0 0;
+    font-size: 0.85rem;
+    opacity: 0.75;
+}
+
+.valor-pendencia {
+    font-weight: 800;
+}
+
+.btn-ver-aluno {
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--laranja);
+}

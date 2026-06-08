@@ -1,0 +1,97 @@
+/* --------------- ESTILIZANDO TELA BASE --------------- */
+.pagina{
+    display: flex;
+    overflow: hidden;
+    margin-left: 13%;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    width: 87%;
+    padding: 80px;
+    gap: 40px;
+}
+
+.introPage{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.textIntroPage{
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    gap: 5px;
+    color: var(--azul-principal);
+    padding-left: 20px;
+}
+
+.textIntroPage h1{
+    font-size: 35px
+}
+
+.textIntroPage p{
+    font-size: 16px;
+}
+
+.btn-tamanho{
+    width: 250px;
+    height: 35px;
+}
+
+.btn-laranja:hover {
+    background-color: var(--azul-secundario);
+    border: 2px solid var(--azul-secundario);
+}
+/* --------------- FIM ESTILIZANDO TELA BASE --------------- */
+
+.tabela-customizada {
+    width: 100%;
+    border-collapse: collapse; /* Une as bordas em uma linha única */
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+.tabela-customizada th, 
+.tabela-customizada td {
+    padding: 12px 15px; /* Espaçamento interno das células */
+    text-align: center;   /* Alinhamento do texto */
+    border-bottom: 1px solid var(--cinza); /* Linha sutil divisória */
+}
+
+.tabela-customizada th {
+    background-color: var(--escuro); 
+    color: var(--branco);
+    font-weight: bold;
+}
+
+/* Efeito zebrado: pinta as linhas pares com uma cor cinza claro */
+.tabela-customizada tbody tr:nth-of-type(even) {
+    background-color: #e6e6e6;
+}
+
+/* Efeito ao passar o mouse por cima da linha */
+.tabela-customizada tbody tr:hover {
+    cursor: pointer;
+    background-color: var(--laranja);
+    color: var(--branco);
+}
+
+.btn-acessar-aluno {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 14px;
+    border-radius: 10px;
+    background: var(--azul-principal);
+    color: var(--branco);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.btn-acessar-aluno:hover {
+    background: var(--escuro);
+}

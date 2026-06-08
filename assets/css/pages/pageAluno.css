@@ -1,0 +1,124 @@
+/* --------------- ESTILIZANDO TELA BASE --------------- */
+.pagina{
+    overflow: hidden;
+    margin-left: 13%;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 87%;
+    padding: 50px;
+}
+
+/* --------------- CONTEÚDO ----------------------- */
+
+.infoAluno{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 10px;
+}
+
+.fotoAluno{
+    width: 180px;
+    height: 180px;
+    margin-left: 10px;
+}
+
+.dados{
+    display: flex;
+    flex-direction: column;
+    width: 1396px;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 10px;
+}
+
+.dados p{
+    font-size: 20px;
+}
+
+.cabecalho{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: var(--azul-principal);
+    line-height: 1;
+}
+
+.blocoInfos{
+    display: flex;
+    justify-content: space-between;
+    color: var(--azul-principal);
+}
+
+.blocoInfos p{
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--laranja);
+}
+
+.blocoInfos span{
+    font-size: 15px;
+}
+
+.bloco{
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    gap: 5px;
+}
+
+hr{
+    border: 0;
+    height: 2px;
+    background-color:var(--cinza); 
+    margin-bottom: 10px;
+}
+
+.btn-tamanho{
+    width: 300px;
+    height: 40px;
+}
+
+.pagArea{
+    width: 1350px;
+    height: 100px;
+
+    border: 1px solid green;
+}
+
+
+.tabela-customizada {
+    width: 100%;
+    border-collapse: collapse; /* Une as bordas em uma linha única */
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+.tabela-customizada th, 
+.tabela-customizada td {
+    padding: 12px 15px; /* Espaçamento interno das células */
+    text-align: center;   /* Alinhamento do texto */
+    border-bottom: 1px solid var(--cinza); /* Linha sutil divisória */
+}
+
+.tabela-customizada th {
+    background-color: var(--escuro); 
+    color: var(--branco);
+    font-weight: bold;
+}
+
+/* Efeito zebrado: pinta as linhas pares com uma cor cinza claro */
+.tabela-customizada tbody tr:nth-of-type(even) {
+    background-color: #e6e6e6;
+}
+
+/* Efeito ao passar o mouse por cima da linha */
+.tabela-customizada tbody tr:hover {
+    cursor: pointer;
+    background-color: var(--laranja);
+    color: var(--branco);
+}

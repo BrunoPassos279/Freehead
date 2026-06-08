@@ -1,0 +1,614 @@
+/* ============================================================
+   modal.css — CSS único para todos os modais do Freehead
+   Usado em: alunos, professores, turmas e pagamentos
+   Caminho: assets/css/modal.css
+   ============================================================ */
+
+
+/* ------------------------------------------------------------
+   OVERLAY — fundo escuro atrás do modal
+   ------------------------------------------------------------ */
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(3px);
+    z-index: 100;
+    animation: fadeIn 0.2s ease;
+}
+
+.modal-overlay.ativo {
+    display: block;
+}
+
+
+/* ------------------------------------------------------------
+   CAIXA DO MODAL
+   ------------------------------------------------------------ */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -48%);
+    width: 90%;
+    max-width: 620px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: var(--branco);
+    border-radius: 16px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
+    z-index: 101;
+    animation: slideUp 0.25s ease;
+}
+
+.modal.ativo {
+    display: block;
+}
+
+
+/* ------------------------------------------------------------
+   CABEÇALHO DO MODAL
+   ------------------------------------------------------------ */
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 28px 20px;
+    border-bottom: 1px solid #f0eded;
+    position: sticky;
+    top: 0;
+    background: var(--branco);
+    z-index: 1;
+}
+
+.modal-titulo {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--escuro);
+    letter-spacing: -0.3px;
+}
+
+.modal-fechar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    color: #999;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+}
+
+.modal-fechar:hover {
+    background: #f5f1f1;
+    color: var(--escuro);
+}
+
+
+/* ------------------------------------------------------------
+   CORPO DO MODAL
+   ------------------------------------------------------------ */
+
+.modal-body {
+    padding: 24px 28px;
+}
+
+.form-modal {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-linha {
+    display: flex;
+    gap: 16px;
+}
+
+.form-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+}
+
+.form-grupo label,
+.label-campo {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+
+/* ------------------------------------------------------------
+   INPUTS, SELECTS E TEXTAREA
+   IMPORTANTE:
+   Não aplicamos appearance:none em checkbox.
+   Isso evita quebrar o visual dos checkboxes.
+   ------------------------------------------------------------ */
+
+.form-grupo input:not([type="checkbox"]),
+.form-grupo select,
+.form-grupo textarea {
+    padding: 10px 14px;
+    border: 1.5px solid #e8e4e4;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    color: var(--escuro);
+    background: #faf9f9;
+    transition: border-color 0.15s, background 0.15s;
+    font-family: inherit;
+    outline: none;
+}
+
+.form-grupo select {
+    appearance: none;
+}
+
+.form-grupo textarea {
+    resize: vertical;
+}
+
+.form-grupo input:not([type="checkbox"]):focus,
+.form-grupo select:focus,
+.form-grupo textarea:focus {
+    border-color: var(--vermelho-principal);
+    background: #fff;
+}
+
+.form-grupo input:not([type="checkbox"]):disabled,
+.form-grupo select:disabled,
+.form-grupo textarea:disabled {
+    background: #f5f3f3;
+    color: #555;
+    cursor: default;
+    border-color: #ede9e9;
+}
+
+
+/* ------------------------------------------------------------
+   CHECKBOXES DE IDIOMAS — MODAL PROFESSOR
+   ------------------------------------------------------------ */
+
+#modalProf #checkboxIdiomas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 14px;
+    margin-top: 10px;
+}
+
+#modalProf #checkboxIdiomas label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    border: 1.5px solid #e8e4e4;
+    border-radius: 10px;
+    background: #faf9f9;
+    color: var(--escuro);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: 0;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+#modalProf #checkboxIdiomas label:hover {
+    border-color: #27ae60;
+    background: #f0fff6;
+}
+
+#modalProf #checkboxIdiomas input[type="checkbox"] {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+
+    width: 18px !important;
+    height: 18px !important;
+    min-width: 18px !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    border: 1.8px solid #d8d8d8 !important;
+    border-radius: 5px !important;
+
+    background: #fff !important;
+    cursor: pointer;
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#modalProf #checkboxIdiomas input[type="checkbox"]:checked {
+    background: #27ae60 !important;
+    border-color: #27ae60 !important;
+}
+
+#modalProf #checkboxIdiomas input[type="checkbox"]:checked::after {
+    content: "✓";
+    position: absolute;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+#modalProf #checkboxIdiomas label:has(input[type="checkbox"]:checked) {
+    border-color: #27ae60;
+    background: #eafaf1;
+    color: #1e8449;
+    font-weight: 700;
+}
+
+#modalProf #checkboxIdiomas input[type="checkbox"]:disabled {
+    cursor: default;
+}
+
+#modalProf #checkboxIdiomas label:has(input[type="checkbox"]:disabled) {
+    cursor: default;
+    opacity: 0.75;
+}
+
+
+/* ------------------------------------------------------------
+   RODAPÉ DO MODAL
+   ------------------------------------------------------------ */
+
+.modal-footer {
+    padding: 16px 28px 24px;
+    border-top: 1px solid #f0eded;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.acoes-edicao {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+
+/* ------------------------------------------------------------
+   BOTÕES DO MODAL
+   ------------------------------------------------------------ */
+
+.btn-modal {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.15s, transform 0.1s;
+    font-family: inherit;
+}
+
+.btn-modal:hover {
+    opacity: 0.85;
+}
+
+.btn-modal:active {
+    transform: scale(0.97);
+}
+
+.btn-salvar {
+    background: var(--laranja);
+    color: #fff;
+    width: 100%;
+    padding: 13px;
+    font-size: 0.9rem;
+}
+
+.btn-editar {
+    background: var(--escuro);
+    color: #fff;
+    flex: 1;
+}
+
+.btn-excluir {
+    background: #fde8e8;
+    color: #c0392b;
+    flex: 1;
+}
+
+.btn-acao {
+    background: #f0eded;
+    color: var(--escuro);
+    flex: 1;
+}
+
+.btn-cancelar {
+    background: transparent;
+    color: #888;
+    border: 1.5px solid #e0dcdc;
+    flex: 1;
+}
+
+
+/* ------------------------------------------------------------
+   PAINÉIS INTERNOS
+   Exclusão, seleção de turma, seleção de aluno etc.
+   ------------------------------------------------------------ */
+
+.painel-interno {
+    display: none;
+    position: absolute;
+    inset: 0;
+    background: var(--branco);
+    border-radius: 16px;
+    z-index: 10;
+    overflow-y: auto;
+}
+
+.painel-interno.ativo {
+    display: flex;
+}
+
+
+/* ------------------------------------------------------------
+   PAINEL DE EXCLUSÃO
+   ------------------------------------------------------------ */
+
+.painel-exclusao {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 32px;
+    gap: 10px;
+}
+
+.exclusao-icone {
+    color: #e74c3c;
+    margin-bottom: 8px;
+}
+
+.exclusao-titulo {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--escuro);
+    line-height: 1.5;
+}
+
+.exclusao-aviso {
+    font-size: 0.82rem;
+    color: #aaa;
+    margin-bottom: 12px;
+}
+
+.painel-btns {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    margin-top: 8px;
+}
+
+
+/* ------------------------------------------------------------
+   PAINEL DE SELEÇÃO
+   ------------------------------------------------------------ */
+
+.painel-selecao {
+    flex-direction: column;
+    padding: 28px;
+    gap: 12px;
+}
+
+.painel-selecao h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--escuro);
+}
+
+.painel-selecao > p {
+    font-size: 0.87rem;
+    color: #888;
+}
+
+.lista-selecao {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+    overflow-y: auto;
+    max-height: 300px;
+}
+
+.item-selecao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    border: 1.5px solid #e8e4e4;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+    background: #faf9f9;
+}
+
+.item-selecao:hover {
+    border-color: var(--vermelho-principal);
+    background: #fff5f5;
+}
+
+.item-selecao.selecionado {
+    border-color: var(--vermelho-principal);
+    background: #fff0f0;
+}
+
+.item-selecao-nome {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--escuro);
+}
+
+.item-selecao-info {
+    font-size: 0.78rem;
+    color: #999;
+    margin-top: 2px;
+}
+
+.item-radio {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    flex-shrink: 0;
+    transition: border-color 0.15s, background 0.15s;
+}
+
+.item-selecao.selecionado .item-radio {
+    border-color: var(--vermelho-principal);
+    background: var(--vermelho-principal);
+}
+
+.msg-lista {
+    font-size: 0.85rem;
+    color: #aaa;
+    padding: 8px 0;
+}
+
+.msg-lista.erro {
+    color: #e74c3c;
+}
+
+
+/* ------------------------------------------------------------
+   BUSCA DE ALUNO NO MODAL DE PAGAMENTO
+   ------------------------------------------------------------ */
+
+.campo-busca-pagamento {
+    position: relative;
+}
+
+.sugestoes-pagamento {
+    display: none;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    width: 100%;
+    background-color: var(--branco);
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    z-index: 9999;
+}
+
+.sugestao-pagamento,
+.sugestao-pagamento-vazia {
+    padding: 10px 14px;
+    font-size: 14px;
+    color: var(--escuro);
+}
+
+.sugestao-pagamento {
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.sugestao-pagamento:hover {
+    background-color: var(--laranja);
+    color: var(--branco);
+}
+
+.sugestao-pagamento-vazia {
+    color: #888;
+}
+
+
+/* ------------------------------------------------------------
+   ANIMAÇÕES
+   ------------------------------------------------------------ */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -44%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -48%);
+    }
+}
+
+
+/* ------------------------------------------------------------
+   RESPONSIVIDADE
+   ------------------------------------------------------------ */
+
+@media (max-width: 520px) {
+    .modal {
+        width: 96%;
+        max-height: 95vh;
+    }
+
+    .form-linha {
+        flex-direction: column;
+    }
+
+    .acoes-edicao {
+        flex-direction: column;
+    }
+
+    #modalProf #checkboxIdiomas {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #modalProf #checkboxIdiomas label {
+        width: 100%;
+    }
+}
+
+/* ------------------------------------------------------------
+   VALIDAÇÃO DOS MODAIS
+   ------------------------------------------------------------ */
+
+.mensagem-validacao {
+    display: none;
+    margin-top: 14px;
+    padding: 12px 14px;
+    border-radius: 10px;
+    background: #fff0f0;
+    border: 1.5px solid #e74c3c;
+    color: #c0392b;
+    font-size: 0.86rem;
+    font-weight: 600;
+}
+
+.mensagem-validacao.ativo {
+    display: block;
+}
+
+.campo-obrigatorio-erro {
+    border-color: #e74c3c !important;
+    background: #fff5f5 !important;
+}
